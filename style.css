@@ -1,0 +1,31 @@
+.container{
+font-family: Montserrat;
+}
+.row{
+width: 100%;
+display: flex;
+
+}
+.col-6{
+  flex-basis: 50%;
+  text-align: center;
+
+}
+.v-align{
+position: relative;
+top: 10%;
+}
+.m-height{
+height: 25vh;
+}
+.s-height{
+height: 10vh;
+}
+input.push-down-input{
+position: relative;
+top: 2vh;
+}
+.col-12{
+flex-basis: 100%;
+text-align: center;
+}
