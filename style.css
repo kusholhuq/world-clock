@@ -23,23 +23,30 @@ position: relative;
 top: 10%;
 }
 .m-height{
-height: 25vh;
+height: 20vh;
 }
 .s-height{
 height: 10vh;
 }
 input.push-down-input{
 position: relative;
-top: 2vh;
+top: 4vh;
 }
 .col-12{
 flex-basis: 100%;
 text-align: center;
 }
 input {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,.1);
   width: 80%;
   border-color: rgba(0,0,0,0);
+  border-radius: 5px;
+}
+
+.push-down-submit{
+  position: relative;
+  top: 5vh;
+  background-color: lightcoral;
 }
 /* background classes */
 .rain{
