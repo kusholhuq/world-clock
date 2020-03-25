@@ -1,14 +1,21 @@
 .container{
 font-family: Montserrat;
+height: 97vh;
+
 }
 .row{
 width: 100%;
 display: flex;
-
+justify-content: space-evenly;
+margin: 2vh 0;
 }
 .col-6{
-  flex-basis: 50%;
+  flex-basis: 40%;
   text-align: center;
+  /* background-color: rgba(255,182,193 ,.2 ); */
+  background-color: rgba(32,178,170 ,.1);
+  border-radius: 10px;
+
 
 }
 .v-align{
@@ -28,4 +35,18 @@ top: 2vh;
 .col-12{
 flex-basis: 100%;
 text-align: center;
+}
+input {
+  background-color: rgba(0,0,0,0);
+  width: 80%;
+  border-color: rgba(0,0,0,0);
+}
+/* background classes */
+.rain{
+  background-image:url(assets/possible.jpg);
+  background-size: cover;
+}
+.bright{
+  background-image: url(assets/maybe.png);
+  background-size: cover;
 }
