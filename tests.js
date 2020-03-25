@@ -1,3 +1,5 @@
+// This document is purely for testing and not part of final product
+
 // var body = document.body;
 // var cool= document.querySelector("#image");
 
