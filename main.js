@@ -1,9 +1,10 @@
 var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
 var city = "irvine";
 var key = "eb1566ac55549b1221d3b4722f59c341";
-var utcCorrection = -28800;
+var utcCorrection = -28800+3600;
 var lat = "";
 var lon = "";
+var timeZone = "";
 
 
 
@@ -80,7 +81,8 @@ function makeClock() {
     url: "https://maps.googleapis.com/maps/api/timezone/json?location="+lat+","+lon+"&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
     success: function (data) {
       console.log(data);
-      utcCorrection = data.rawOffset
+      utcCorrection = data.rawOffset;
+      timeZone = data.timeZoneName;
     },
     error: function (error) {
       console.error(error);
@@ -94,7 +96,19 @@ function makeClock() {
 function showTime() {
   var date = new Date();
   var h = date.getHours();
-  var correctedH = h + 8 + (utcCorrection / 3600);
+  var correctedH = h + 7 + (utcCorrection / 3600);
+
+  switch(timeZone){
+    case "Eastern Standard Time":
+    case "Mountain Standard Time":
+    case "Pacific Standard Time":
+    case "Alaska Standard Time":
+    case "Hawaii-Aleutian Standard Time":
+      correctedH = correctedH +1;
+  }
+
+
+
   if (correctedH >= 24) {
     correctedH = correctedH - 24;
   }
