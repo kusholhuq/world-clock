@@ -11,17 +11,17 @@
   <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2|Montserrat&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <div class="container dark">
+<body class="bright">
+  <div class="container">
     <div class="row">
-      <div class="col-6 m-height">
+      <div class="col-6 m-height box">
         <div class="v-align">
           <h2 id="main">Main</h2>
           <p id="mainDescription">20%</p>
         </div>
 
       </div>
-      <div class="col-6 m-height">
+      <div class="col-6 m-height box">
         <div class="v-align">
           <h2>Temp</h2>
           <p id="temp">69 degrees </p>
@@ -30,14 +30,14 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-6 m-height">
+      <div class="col-6 m-height box">
         <div class="v-align">
           <h2>Wind</h2>
           <p id="wind">30mph</p>
         </div>
 
       </div>
-      <div class="col-6 m-height">
+      <div class="col-6 m-height box">
         <div class="v-align">
           <h2>Humidity</h2>
           <p id="humidity">71%</p>
@@ -46,14 +46,14 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-6 m-height">
+      <div class="col-6 m-height box">
         <div class="v-align">
           <h2 id="city">City</h2>
           <p id="country">Country</p>
         </div>
 
       </div>
-      <div class="col-6 m-height">
+      <div class="col-6 m-height box">
         <div class="v-align">
 
           <input id="input" class="push-down-input" type="text" id="city" placeholder="City">
@@ -62,17 +62,24 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row push-up">
       <div class="col-12">
         <p> <strong>Local Time</strong> </p>
         <p id="currentTime">time</p>
       </div>
     </div>
-        <div class="row">
+        <div class="row push-up">
           <div class="col-12">
             <p><strong>Selected City</strong> </p>
             <p id="UTCtime">time</p>
           </div>
+        </div>
+        <div class="absolute flex">
+
+          <button id="dark">Dark</button>
+          <button id="water">Watercolor</button>
+          <button id="lights">City Lights</button>
+          <button id="rain">Rain</button>
         </div>
   </div>
 
