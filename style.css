@@ -108,3 +108,60 @@ button{
   position: relative;
   bottom: 1.5vh;
 }
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+.col-6{
+  flex-basis: 20%;
+  height: 8rem;
+  position: relative;
+  margin-left: 1.7rem;
+  top: 1rem;
+  justify-content: left;
+}
+
+.row{
+  justify-content: left;
+}
+
+.row.bottom-row{
+  position: absolute;
+  top: 0rem;
+  left: 20rem;
+
+
+}
+.row.push-up{
+  position: absolute;
+  top: 10rem;
+  left: 5rem;
+}
+.row.push-up.foreign{
+  left: 13rem;
+}
+
+
+}
