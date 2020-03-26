@@ -55,6 +55,8 @@
 
 //google maps api for time
 var utcCorrection = 0;
+var lat="";
+var lon="";
 $.ajax({
   method: "GET",
   url: "https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822510&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
@@ -74,10 +76,19 @@ function showTime(){
   var date = new Date();
   var h = date.getHours();
   var correctedH = h+8+(utcCorrection/3600);
+  if(correctedH>24){
+    correctedH = correctedH - 24;
+  }
+  if(correctedH<0){
+    correctedH= correctedH +24;
+  }
   var m = date.getMinutes();
   var s = date.getSeconds();
   var time = h+":"+m+":"+s;
   var foreignTime = correctedH + ":" + m + ":" + s;
+
+
+
   var target = document.getElementById("currentTime");
   target.textContent = time;
   var otherTarget =document.getElementById("UTCtime");
