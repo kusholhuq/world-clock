@@ -36,19 +36,53 @@
 
 // weather test
 //api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
-var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
-var city = "london";
-var key = "eb1566ac55549b1221d3b4722f59c341";
+// var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
+// var city = "london";
+// var key = "eb1566ac55549b1221d3b4722f59c341";
+// $.ajax({
+//   method: "GET",
+//   url: path + city + "&appid=eb1566ac55549b1221d3b4722f59c341",
+//   dataType: "json",
+//   success: function (data) {
+//     console.log(data);
+//   },
+//   error: function (error) {
+//     console.error(error);
+//   }
+// })
+
+//above is working ajax request for weather of a city
+
+//google maps api for time
+var utcCorrection = 0;
 $.ajax({
   method: "GET",
-  url: path + city + "&appid=eb1566ac55549b1221d3b4722f59c341",
-  dataType: "json",
-  success: function (data) {
+  url: "https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822510&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
+  success:function(data){
     console.log(data);
+    utcCorrection = data.rawOffset
   },
-  error: function (error) {
+  error: function(error){
     console.error(error);
   }
 })
 
-//above is working ajax request for weather of a city
+
+
+
+function showTime(){
+  var date = new Date();
+  var h = date.getHours();
+  var correctedH = h+8+(utcCorrection/3600);
+  var m = date.getMinutes();
+  var s = date.getSeconds();
+  var time = h+":"+m+":"+s;
+  var foreignTime = correctedH + ":" + m + ":" + s;
+  var target = document.getElementById("currentTime");
+  target.textContent = time;
+  var otherTarget =document.getElementById("UTCtime");
+  otherTarget.textContent = foreignTime;
+}
+
+setTimeout(showTime, 250);
+setInterval(showTime, 1000);
