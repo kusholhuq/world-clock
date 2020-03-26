@@ -53,7 +53,7 @@
 
 //above is working ajax request for weather of a city
 var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
-var city = "new york";
+var city = "london";
 var key = "eb1566ac55549b1221d3b4722f59c341";
 var utcCorrection = -28800;
 var lat = "40.71";
