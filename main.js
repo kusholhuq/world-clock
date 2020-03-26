@@ -130,3 +130,57 @@ function showTime() {
 
 setTimeout(showTime, 250);
 setInterval(showTime, 1000);
+
+
+//theme switch
+var body = document.body;
+var box = document.querySelectorAll(".box");
+var dark = document.querySelector("#dark");
+var water = document.querySelector("#water");
+var lights = document.querySelector("#lights");
+var rain = document.querySelector("#rain");
+var input = document.getElementById("input");
+//var submit declared earlier
+
+dark.addEventListener("click",handleDark);
+water.addEventListener("click", handleWater);
+lights.addEventListener("click", handleLights);
+rain.addEventListener("click", handleRain);
+
+function handleDark(event){
+body.setAttribute("class","dark");
+input.classList.add("white");
+input.classList.remove("black");
+for(var i=0; i<box.length;i++){
+  box[i].classList.remove("pink");
+  box[i].classList.add("grey");
+
+}
+}
+function handleWater(event) {
+  body.setAttribute("class", "bright");
+  input.classList.add("black");
+  input.classList.remove("white");
+  for (var i = 0; i < box.length; i++) {
+    box[i].classList.add("pink");
+    box[i].classList.remove("grey");
+  }
+}
+function handleLights(event) {
+  body.setAttribute("class", "lights");
+  input.classList.add("white");
+  input.classList.remove("black");
+  for (var i = 0; i < box.length; i++) {
+    box[i].classList.add("pink");
+    box[i].classList.remove("grey");
+  }
+}
+function handleRain(event) {
+  body.setAttribute("class", "rain");
+  input.classList.add("black");
+  input.classList.remove("white");
+  for (var i = 0; i < box.length; i++) {
+    box[i].classList.add("grey");
+    box[i].classList.remove("pink");
+  }
+}
