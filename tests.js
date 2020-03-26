@@ -52,14 +52,38 @@
 // })
 
 //above is working ajax request for weather of a city
+var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
+var city = "new york";
+var key = "eb1566ac55549b1221d3b4722f59c341";
+var utcCorrection = -28800;
+var lat = "40.71";
+var lon = "-74.01";
 
-//google maps api for time
-var utcCorrection = 0;
-var lat="";
-var lon="";
+
+//weather ajax request
 $.ajax({
   method: "GET",
-  url: "https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822510&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
+  url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
+  dataType: "json",
+  success: function (data) {
+    console.log(data);
+    //destroyChildren();
+    //populateWeather(data);
+    lat = data.coord.lat;
+    lon = data.coord.lon;
+    makeClock();
+
+  },
+  error: function (error) {
+    console.error(error);
+  }
+})
+
+//google maps api for time
+function makeClock(){
+$.ajax({
+  method: "GET",
+  url: "https://maps.googleapis.com/maps/api/timezone/json?location="+lat+","+lon+"&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
   success:function(data){
     console.log(data);
     utcCorrection = data.rawOffset
@@ -69,7 +93,8 @@ $.ajax({
   }
 })
 
-
+}
+// setTimeout(makeClock, 1000);
 
 
 function showTime(){
