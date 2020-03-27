@@ -7,6 +7,7 @@ width: 100%;
 display: flex;
 justify-content: space-evenly;
 margin: 2vh 0;
+flex-wrap: wrap;
 }
 .col-6{
   flex-basis: 40%;
@@ -14,6 +15,7 @@ margin: 2vh 0;
   background-color: rgba(255,182,193 ,.2 );
   /* background-color: rgba(32,178,170 ,.1); */
   border-radius: 10px;
+  margin-top: 1rem;
 }
 .v-align{
 position: relative;

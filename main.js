@@ -8,19 +8,19 @@ var timeZone = "";
 
 
 
-// $.ajax({
-//   method: "GET",
-//   url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
-//   dataType: "json",
-//   success: function (data) {
-//     console.log(data);
-//     populateWeather(data);
+$.ajax({
+  method: "GET",
+  url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
+  dataType: "json",
+  success: function (data) {
+    console.log(data);
+    populateWeather(data);
 
-//   },
-//   error: function (error) {
-//     console.error(error);
-//   }
-// })
+  },
+  error: function (error) {
+    console.error(error);
+  }
+})
 
 
 function populateWeather(weatherObject) {
