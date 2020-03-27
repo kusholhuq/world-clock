@@ -1,7 +1,4 @@
-body{
-margin: 0;
-height: 667px;
-}
+
 .container{
 font-family: Montserrat;
 }
@@ -57,6 +54,7 @@ input {
 .bright{
   background-image: url(assets/maybe.png);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .dark{
   background-color: black;
@@ -125,7 +123,10 @@ button{
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
-
+body{
+margin: 0;
+height: 667px;
+}
 }
 
 /* Landscape */
@@ -134,9 +135,14 @@ button{
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
+body{
+  width: 667px;
+  height: 375px;
+  overflow: hidden;
+}
 .col-6{
-  flex-basis: 20%;
-  height: 8rem;
+  flex-basis: 40%;
+  height: 9rem;
   position: relative;
   margin-left: 1.7rem;
   top: 1rem;
@@ -147,21 +153,36 @@ button{
   justify-content: left;
 }
 
-.row.bottom-row{
+/* .row.bottom-row{
   position: absolute;
   top: 0rem;
+  left: 30rem;
+
+
+} */
+.row.push-up{
+  position: absolute;
+  top: 10rem;
   left: 20rem;
 
 
 }
-.row.push-up{
-  position: absolute;
-  top: 10rem;
-  left: 5rem;
-}
 .row.push-up.foreign{
-  left: 13rem;
-}
+  left: 29rem;
+  top: 15rem;
 
+}
+.row.push-up.local{
+  left: 29rem;
+  top: 5rem;
+}
+div.col-12 p{
+  width:200px;
+  display: flex;
+  margin:0;
+}
+div.col-12 {
+  display: flex;
+}
 
 }
