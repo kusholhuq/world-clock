@@ -11,7 +11,6 @@ $.ajax({
   url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
   dataType: "json",
   success: function (data) {
-    console.log(data);
     populateWeather(data);
 
   },
@@ -53,7 +52,6 @@ function updateCity() {
     url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
     dataType: "json",
     success: function (data) {
-      console.log(data);
       populateWeather(data);
       lat = data.coord.lat;
       lon = data.coord.lon;
@@ -71,7 +69,6 @@ function makeClock() {
     method: "GET",
     url: "https://maps.googleapis.com/maps/api/timezone/json?location=" + lat + "," + lon + "&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
     success: function (data) {
-      console.log(data);
       utcCorrection = data.rawOffset;
       timeZone = data.timeZoneName;
     },
