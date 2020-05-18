@@ -1,19 +1,34 @@
-# C220-Hackathon-2
+# world-clock
+> - Maintained by: `kusholhuq`
+## Description
+A mobile first web app that tells time and weather in cities across the globe.
 
-For this Hackathon, you will be combining multiple public APIs of your choosing in order to create a web application that uses their combined data to create something new. The application is yours to design, but your idea must be approved by an instructor before you can move forward with building the application.
-
-### Requirements
-- Combine **at least** 2 public APIs via AJAX requests and present their combined information in a web application of your design.
-- Must be issue-managed via [Meistertask](https://www.meistertask.com/) or an equivalent Kanban board.
-- Application idea **MUST** be approved by an instructor before you begin coding your project.
+## Live Demo
+https://world-clock.kusholhuq.com/
 
 
-### Approved API List
+## Technologies Used
+  - HTML5
+  - CSS3
+  - JavaScript (ES6)
+  - jQuery
+  - [**Open Weather API**](https://openweathermap.org/current)
+  - [**Google Time Zone API**](https://developers.google.com/maps/documentation/timezone/start?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_433476780412-ADGP_Hybrid+%7C+AW+SEM+%7C+SKWS+~+Time+Zone+API-KWID_43700039136946363-kwd-538188851010-userloc_9061184&utm_term=KW_%2Btime%20%2Bzone%20%2Bapi-ST_%2Btime+%2Bzone+%2Bapi&gclid=EAIaIQobChMIlfKxp8q-6QIVfPvjBx2Spw0_EAAYASAAEgJuYPD_BwE)
 
-Found [**here**](https://docs.google.com/document/d/10CMIYVWv36gophaq_3DldBoAT4w6g4xL9xEMnEu-z5o/edit?usp=sharing)
+  ## Features
+ 1. User can view weather from city of choice.
+ 1. User can view local time.
+ 1. User can view time from city of choice.
+ 1. User can select theme of their liking.
 
-### ProgrammableWeb API Directory
+ ## Preview
+ <img src="assets/gif.gif">
 
-Found [**here**](https://www.programmableweb.com/apis/directory)
-
-**NOTE:** Any APIs found through this link not on the approved API list above must be approved by an instructor to be used. In order to be approved, you must be able to provide proof of a successful AJAX call in the browser **WITHOUT** using VSCode's Live Server.
+ ## Development
+ ### Getting Started
+ 1. Clone the repository
+    ``` bash
+    git clone https://github.com/kusholhuq/world-clock
+    cd world-clock
+    ```
+ 1. Open the project in your default browser
