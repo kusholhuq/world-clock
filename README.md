@@ -1,5 +1,6 @@
 # world-clock
 > - Maintained by: `kusholhuq`
+
 ## Description
 A mobile first web app that tells time and weather in cities across the globe.
 

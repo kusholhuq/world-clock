@@ -1,19 +1,16 @@
 var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
 var city = "irvine";
 var key = "eb1566ac55549b1221d3b4722f59c341";
-var utcCorrection = -28800+3600;
+var utcCorrection = -28800 + 3600;
 var lat = "";
 var lon = "";
 var timeZone = "";
-
-
 
 $.ajax({
   method: "GET",
   url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
   dataType: "json",
   success: function (data) {
-    console.log(data);
     populateWeather(data);
 
   },
@@ -21,7 +18,6 @@ $.ajax({
     console.error(error);
   }
 })
-
 
 function populateWeather(weatherObject) {
   var main = document.querySelector("#main");
@@ -56,13 +52,10 @@ function updateCity() {
     url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
     dataType: "json",
     success: function (data) {
-      console.log(data);
       populateWeather(data);
       lat = data.coord.lat;
       lon = data.coord.lon;
       makeClock();
-
-
     },
     error: function (error) {
       console.error(error);
@@ -71,16 +64,11 @@ function updateCity() {
   $("#input").val("");
 }
 
-
-//google maps api
-
-//google maps api for time
 function makeClock() {
   $.ajax({
     method: "GET",
-    url: "https://maps.googleapis.com/maps/api/timezone/json?location="+lat+","+lon+"&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
+    url: "https://maps.googleapis.com/maps/api/timezone/json?location=" + lat + "," + lon + "&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
     success: function (data) {
-      console.log(data);
       utcCorrection = data.rawOffset;
       timeZone = data.timeZoneName;
     },
@@ -88,26 +76,21 @@ function makeClock() {
       console.error(error);
     }
   })
-
 }
-// setTimeout(makeClock, 1000);
-
 
 function showTime() {
   var date = new Date();
   var h = date.getHours();
   var correctedH = h + 7 + (utcCorrection / 3600);
 
-  switch(timeZone){
+  switch (timeZone) {
     case "Eastern Standard Time":
     case "Mountain Standard Time":
     case "Pacific Standard Time":
     case "Alaska Standard Time":
     case "Hawaii-Aleutian Standard Time":
-      correctedH = correctedH +1;
+      correctedH = correctedH + 1;
   }
-
-
 
   if (correctedH >= 24) {
     correctedH = correctedH - 24;
@@ -120,8 +103,6 @@ function showTime() {
   var time = h + ":" + m + ":" + s;
   var foreignTime = correctedH + ":" + m + ":" + s;
 
-
-
   var target = document.getElementById("currentTime");
   target.textContent = time;
   var otherTarget = document.getElementById("UTCtime");
@@ -131,8 +112,6 @@ function showTime() {
 setTimeout(showTime, 250);
 setInterval(showTime, 1000);
 
-
-//theme switch
 var body = document.body;
 var box = document.querySelectorAll(".box");
 var dark = document.querySelector("#dark");
@@ -140,22 +119,20 @@ var water = document.querySelector("#water");
 var lights = document.querySelector("#lights");
 var rain = document.querySelector("#rain");
 var input = document.getElementById("input");
-//var submit declared earlier
 
-dark.addEventListener("click",handleDark);
+dark.addEventListener("click", handleDark);
 water.addEventListener("click", handleWater);
 lights.addEventListener("click", handleLights);
 rain.addEventListener("click", handleRain);
 
-function handleDark(event){
-body.setAttribute("class","dark");
-input.classList.add("white");
-input.classList.remove("black");
-for(var i=0; i<box.length;i++){
-  box[i].classList.remove("pink");
-  box[i].classList.add("grey");
-
-}
+function handleDark(event) {
+  body.setAttribute("class", "dark");
+  input.classList.add("white");
+  input.classList.remove("black");
+  for (var i = 0; i < box.length; i++) {
+    box[i].classList.remove("pink");
+    box[i].classList.add("grey");
+  }
 }
 function handleWater(event) {
   body.setAttribute("class", "bright");
