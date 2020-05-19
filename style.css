@@ -1,6 +1,7 @@
 .container{
 font-family: Montserrat;
 }
+
 .row{
 width: 100%;
 display: flex;
@@ -8,6 +9,7 @@ justify-content: space-evenly;
 margin: 2vh 0;
 flex-wrap: wrap;
 }
+
 .col-6{
   flex-basis: 40%;
   text-align: center;
@@ -15,66 +17,82 @@ flex-wrap: wrap;
   border-radius: 10px;
   margin-top: 1rem;
 }
+
 .v-align{
 position: relative;
 top: 10%;
 }
+
 .m-height{
 height: 20vh;
 }
+
 .s-height{
 height: 10vh;
 }
+
 input.push-down-input{
 position: relative;
 top: 4vh;
 }
+
 .col-12{
 flex-basis: 100%;
 text-align: center;
 }
+
 input {
   background-color: rgba(0,0,0,.1);
   width: 80%;
   border-color: rgba(0,0,0,0);
   border-radius: 5px;
 }
+
 .push-down-submit{
   position: relative;
   top: 5vh;
   background-color: lightcoral;
 }
+
 .rain{
   background-image:url(assets/possible.jpg);
   background-size: cover;
 }
+
 .bright{
   background-image: url(assets/maybe.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .dark{
   background-color: black;
   color: white;
 }
+
 .lights{
   background-image: url(assets/Dark\ background.jfif);
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
 }
+
 .pink{
 background-color: rgba(255,182,193 ,.2 );
 }
+
 .grey{
 background-color: rgba(232, 236, 241, .2);
 }
+
 .white{
   color: white;
 }
+
 .black{
   color: black;
 }
+
 .absolute{
   position: absolute;
   bottom: 2vh;
@@ -82,45 +100,53 @@ background-color: rgba(232, 236, 241, .2);
   right: 2vh;
   justify-content: space-evenly;
 }
+
 .flex{
   display: flex;
   flex-direction: row;
 }
+
 button{
   border-radius: 5px;
   background-color: rgba(255,255,255,.1);
   border: 0;
 }
+
 .push-up{
   position: relative;
   bottom: 1.5vh;
 }
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
 }
+
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
+
 body{
 margin: 0;
 height: 667px;
 }
 }
+
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
+
 body{
   width: 667px;
   height: 375px;
   overflow: hidden;
 }
+
 .col-6{
   flex-basis: 40%;
   height: 9rem;
@@ -129,27 +155,33 @@ body{
   top: 1rem;
   justify-content: left;
 }
+
 .row{
   justify-content: left;
 }
+
 .row.push-up{
   position: absolute;
   top: 10rem;
   left: 20rem;
 }
+
 .row.push-up.foreign{
   left: 29rem;
   top: 15rem;
 }
+
 .row.push-up.local{
   left: 29rem;
   top: 5rem;
 }
+
 div.col-12 p{
   width:200px;
   display: flex;
   margin:0;
 }
+
 div.col-12 {
   display: flex;
 }
