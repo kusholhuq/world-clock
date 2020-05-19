@@ -1,7 +1,4 @@
-body{
-margin: 0;
-height: 667px;
-}
+
 .container{
 font-family: Montserrat;
 }
@@ -10,12 +7,14 @@ width: 100%;
 display: flex;
 justify-content: space-evenly;
 margin: 2vh 0;
+flex-wrap: wrap;
 }
 .col-6{
   flex-basis: 40%;
   text-align: center;
   background-color: rgba(255,182,193 ,.2 );
   border-radius: 10px;
+  margin-top: 1rem;
 }
 .v-align{
 position: relative;
@@ -53,6 +52,7 @@ input {
 .bright{
   background-image: url(assets/maybe.png);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .dark{
   background-color: black;
@@ -96,4 +96,84 @@ button{
 .push-up{
   position: relative;
   bottom: 1.5vh;
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+body{
+margin: 0;
+height: 667px;
+}
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+body{
+  width: 667px;
+  height: 375px;
+  overflow: hidden;
+}
+.col-6{
+  flex-basis: 40%;
+  height: 9rem;
+  position: relative;
+  margin-left: 1.7rem;
+  top: 1rem;
+  justify-content: left;
+}
+
+.row{
+  justify-content: left;
+}
+
+/* .row.bottom-row{
+  position: absolute;
+  top: 0rem;
+  left: 30rem;
+
+
+} */
+.row.push-up{
+  position: absolute;
+  top: 10rem;
+  left: 20rem;
+
+
+}
+.row.push-up.foreign{
+  left: 29rem;
+  top: 15rem;
+
+}
+.row.push-up.local{
+  left: 29rem;
+  top: 5rem;
+}
+div.col-12 p{
+  width:200px;
+  display: flex;
+  margin:0;
+}
+div.col-12 {
+  display: flex;
+}
+
 }
