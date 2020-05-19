@@ -1,4 +1,3 @@
-
 .container{
 font-family: Montserrat;
 }
@@ -63,7 +62,6 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-
 }
 .pink{
 background-color: rgba(255,182,193 ,.2 );
@@ -97,18 +95,12 @@ button{
   position: relative;
   bottom: 1.5vh;
 }
-
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-
-/* Portrait and Landscape */
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
-
 }
-
-/* Portrait */
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
@@ -119,8 +111,6 @@ margin: 0;
 height: 667px;
 }
 }
-
-/* Landscape */
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
@@ -139,29 +129,17 @@ body{
   top: 1rem;
   justify-content: left;
 }
-
 .row{
   justify-content: left;
 }
-
-/* .row.bottom-row{
-  position: absolute;
-  top: 0rem;
-  left: 30rem;
-
-
-} */
 .row.push-up{
   position: absolute;
   top: 10rem;
   left: 20rem;
-
-
 }
 .row.push-up.foreign{
   left: 29rem;
   top: 15rem;
-
 }
 .row.push-up.local{
   left: 29rem;
@@ -175,5 +153,4 @@ div.col-12 p{
 div.col-12 {
   display: flex;
 }
-
 }
