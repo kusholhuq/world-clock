@@ -31,6 +31,18 @@ height: 20vh;
 height: 10vh;
 }
 
+.pointer{
+  cursor: pointer;
+}
+.theme-point{
+transition: all ease .4s;
+}
+
+.theme-point:hover{
+background-color: grey;
+transition: all ease .4s;
+}
+
 input.push-down-input{
 position: relative;
 top: 4vh;
@@ -95,7 +107,7 @@ background-color: rgba(232, 236, 241, .2);
 
 .absolute{
   position: absolute;
-  bottom: 2vh;
+  bottom: 4vh;
   left: 2vh;
   right: 2vh;
   justify-content: space-evenly;
@@ -114,7 +126,14 @@ button{
 
 .push-up{
   position: relative;
-  bottom: 1.5vh;
+  bottom: 2vh;
+}
+.push-up-more{
+  position: relative;
+  bottom: 7vh;
+}
+.theme-btns{
+  font-size: 17px;
 }
 
 @media only screen
