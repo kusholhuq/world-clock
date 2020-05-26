@@ -17,8 +17,17 @@ app.use(express.json());
 //       res.status(500).json({ error: 'An unexpected error occurred' });
 //     })
 // });
+var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
+var city = "irvine";
 var key = "eb1566ac55549b1221d3b4722f59c341";
-  app.get('/api')
+var utcCorrection = -28800 + 3600;
+var lat = "";
+var lon = "";
+var timeZone = "";
+
+  app.get('/api/weather', (req,res,next)=>{
+    fetch('')
+  })
 
 
 // app.get("/api/geocode/:latlng", (req, res) => {
