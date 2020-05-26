@@ -8,26 +8,29 @@ const app = express();
 app.use(staticMiddleware);
 app.use(express.json());
 
-app.get("/api/iss-coords", (req, res) => {
-  fetch('http://api.open-notify.org/iss-now.json')
-    .then(response => response.json())
-    .then(coords => res.json(coords))
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({ error: 'An unexpected error occurred' });
-    })
-});
+// app.get("/api/iss-coords", (req, res) => {
+//   fetch('http://api.open-notify.org/iss-now.json')
+//     .then(response => response.json())
+//     .then(coords => res.json(coords))
+//     .catch(err => {
+//       console.error(err);
+//       res.status(500).json({ error: 'An unexpected error occurred' });
+//     })
+// });
+var key = "eb1566ac55549b1221d3b4722f59c341";
+  app.get('/api')
 
-app.get("/api/geocode/:latlng", (req, res) => {
-  const { latlng } = req.params;
-  fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latlng}&key=${process.env.GOOGLE_API}`)
-    .then(response => response.json())
-    .then(locDeets => res.json(locDeets))
-    .catch(err => {
-      console.error(err);
-      res.status(500).json({ error: 'An unexpected error occurred' });
-    })
-})
+
+// app.get("/api/geocode/:latlng", (req, res) => {
+//   const { latlng } = req.params;
+//   fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latlng}&key=${process.env.GOOGLE_API}`)
+//     .then(response => response.json())
+//     .then(locDeets => res.json(locDeets))
+//     .catch(err => {
+//       console.error(err);
+//       res.status(500).json({ error: 'An unexpected error occurred' });
+//     })
+// })
 
 app.listen(process.env.PORT, () => {
   // eslint-disable-next-line no-console
