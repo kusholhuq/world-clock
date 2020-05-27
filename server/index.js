@@ -25,8 +25,19 @@ var lat = "";
 var lon = "";
 var timeZone = "";
 
-  app.get('/api/weather', (req,res,next)=>{
-    fetch('')
+  app.get('/api/weather/:city', (req,res,next)=>{
+    const {city} = req.params;
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=eb1566ac55549b1221d3b4722f59c341`)
+      .then(result => result.json())
+      .then(data => {
+        fetch(`https://maps.googleapis.com/maps/api/timezone/json?location=${data.coord.lat},${data.coord.lon}&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo`)
+        .then(result2 => result2.json())
+        .then(data2=>{
+          res.status(200).json({data,data2})
+        })
+          .catch(err => next(err))
+      })
+      .catch(err=>next(err));
   })
 
 
