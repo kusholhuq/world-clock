@@ -29,11 +29,11 @@ var timeZone = "";
     const {city} = req.params;
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.WEATHER_KEY}`)
       .then(result => result.json())
-      .then(weather => {
-        fetch(`https://maps.googleapis.com/maps/api/timezone/json?location=${weather.coord.lat},${weather.coord.lon}&timestamp=1331161200&key=${process.env.TIME_KEY}`)
+      .then(weatherData => {
+        fetch(`https://maps.googleapis.com/maps/api/timezone/json?location=${weatherData.coord.lat},${weatherData.coord.lon}&timestamp=1331161200&key=${process.env.TIME_KEY}`)
         .then(result2 => result2.json())
-        .then(time=>{
-          res.status(200).json({weather,time})
+        .then(timeData=>{
+          res.status(200).json({weatherData,timeData})
         })
           .catch(err => next(err))
       })
