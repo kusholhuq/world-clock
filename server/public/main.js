@@ -1,88 +1,114 @@
-var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
+//var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
 var city = "irvine";
-var key = "eb1566ac55549b1221d3b4722f59c341";
+//var key = "eb1566ac55549b1221d3b4722f59c341";
 var utcCorrection = -28800 + 3600;
 var lat = "";
 var lon = "";
 var timeZone = "";
+function apiCall (){
+  fetch(`/api/weather/${city}`)
+    .then(response => response.json())
+    .then(data => {
+      populateWeather(data)
+    })
+    .catch(err => console.error(err));
+}
+apiCall()
 
-$.ajax({
-  method: "GET",
-  url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
-  dataType: "json",
-  success: function (data) {
-    populateWeather(data);
 
-  },
-  error: function (error) {
-    console.error(error);
-  }
-})
 
-function populateWeather(weatherObject) {
+// $.ajax({
+//   method: "GET",
+//   url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
+//   dataType: "json",
+//   success: function (data) {
+//     populateWeather(data);
+
+//   },
+//   error: function (error) {
+//     console.error(error);
+//   }
+// })
+
+function populateWeather(dualObject) {
   var main = document.querySelector("#main");
   var mainDes = document.querySelector("#mainDescription");
 
-  main.textContent = weatherObject.weather[0].main;
-  mainDes.textContent = weatherObject.weather[0].description;
+  main.textContent = dualObject.weatherData.weather[0].main;
+  mainDes.textContent = dualObject.weatherData.weather[0].description;
 
   var temp = document.querySelector("#temp");
-  temp.textContent = weatherObject.main.temp + "°" + "C";
+  temp.textContent = dualObject.weatherData.main.temp + "°" + "C";
 
   var wind = document.querySelector("#wind");
-  wind.textContent = weatherObject.wind.speed + "m/s" + " , " + weatherObject.wind.deg + "°";
+  wind.textContent = dualObject.weatherData.wind.speed + "m/s" + " , " + dualObject.weatherData.wind.deg + "°";
 
   var humidity = document.querySelector("#humidity");
-  humidity.textContent = weatherObject.main.humidity + "%";
+  humidity.textContent = dualObject.weatherData.main.humidity + "%";
 
   var citydisplay = document.querySelector("#city");
   var countrydisplay = document.querySelector("#country");
 
-  citydisplay.textContent = weatherObject.name;
-  countrydisplay.textContent = weatherObject.sys.country;
+  citydisplay.textContent = dualObject.weatherData.name;
+  countrydisplay.textContent = dualObject.weatherData.sys.country;
 }
 
 var submit = document.querySelector("#submit");
-submit.addEventListener("click", updateCity);
+submit.addEventListener("click", updateCityAndMakeClock);
 
-function updateCity() {
+function updateCityAndMakeClock(){
   city = "" + $("#input").val();
-  $.ajax({
-    method: "GET",
-    url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
-    dataType: "json",
-    success: function (data) {
-      populateWeather(data);
-      lat = data.coord.lat;
-      lon = data.coord.lon;
-      makeClock();
-    },
-    error: function (error) {
-      console.error(error);
-    }
-  })
-  $("#input").val("");
+  fetch(`/api/weather/${city}`)
+    .then(response => response.json())
+    .then(data => {
+      populateWeather(data)
+      lat = data.weatherData.coord.lat;
+      lon = data.weatherData.coord.lon;
+      utcCorrection = data.timeData.rawOffset;
+      timeZone = data.timeData.timeZoneName;
+    })
+    .catch(err => console.error(err));
 }
 
-function makeClock() {
-  $.ajax({
-    method: "GET",
-    url: "https://maps.googleapis.com/maps/api/timezone/json?location=" + lat + "," + lon + "&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
-    success: function (data) {
-      utcCorrection = data.rawOffset;
-      timeZone = data.timeZoneName;
-    },
-    error: function (error) {
-      console.error(error);
-    }
-  })
-}
+
+// function updateCity() {
+//   city = "" + $("#input").val();
+//   $.ajax({
+//     method: "GET",
+//     url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
+//     dataType: "json",
+//     success: function (data) {
+//       populateWeather(data);
+//       lat = data.coord.lat;
+//       lon = data.coord.lon;
+//       makeClock();
+//     },
+//     error: function (error) {
+//       console.error(error);
+//     }
+//   })
+//   $("#input").val("");
+// }
+
+// function makeClock() {
+//   $.ajax({
+//     method: "GET",
+//     url: "https://maps.googleapis.com/maps/api/timezone/json?location=" + lat + "," + lon + "&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
+//     success: function (data) {
+//       utcCorrection = data.rawOffset;
+//       timeZone = data.timeZoneName;
+//     },
+//     error: function (error) {
+//       console.error(error);
+//     }
+//   })
+// }
 
 function showTime() {
   var date = new Date();
   var h = date.getHours();
   var correctedH = h + 7 + (utcCorrection / 3600);
-
+console.log(date);
   switch (timeZone) {
     case "Eastern Standard Time":
     case "Mountain Standard Time":
