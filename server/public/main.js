@@ -1,6 +1,6 @@
-var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
+//var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
 var city = "irvine";
-var key = "eb1566ac55549b1221d3b4722f59c341";
+//var key = "eb1566ac55549b1221d3b4722f59c341";
 var utcCorrection = -28800 + 3600;
 var lat = "";
 var lon = "";
@@ -108,7 +108,7 @@ function showTime() {
   var date = new Date();
   var h = date.getHours();
   var correctedH = h + 7 + (utcCorrection / 3600);
-
+console.log(date);
   switch (timeZone) {
     case "Eastern Standard Time":
     case "Mountain Standard Time":
