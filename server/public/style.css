@@ -89,6 +89,24 @@ input {
   color: white;
 }
 
+.neon{
+  background-image: url(assets/maybe.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sky{
+  background-image: url(assets/maybe.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sea{
+  background-image: url(assets/maybe.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .pink{
 background-color: rgba(255,182,193 ,.2 );
 }

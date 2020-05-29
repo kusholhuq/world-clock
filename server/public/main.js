@@ -136,3 +136,27 @@ function handleRain(event) {
     box[i].classList.remove("pink");
   }
 }
+
+const backgrounds = ['neon', 'sky', 'sea']
+let currentIndex = 0;
+
+function checkFont(){
+  //if current index equals this this or this
+  //make font colors white or black in response
+  //and make squares diff color in response
+  //can do a switch statement
+}
+
+function applyBackground() {
+  body.setAttribute('class', backgrounds[currentIndex]);
+}
+
+function cycleBackgroundForward(){
+  currentIndex++;
+  applyBackground();
+}
+
+function cycleBackgroundBack(){
+  currentIndex--;
+  applyBackground();
+}
