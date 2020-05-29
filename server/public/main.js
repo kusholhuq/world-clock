@@ -1,34 +1,16 @@
-//var path = 'http://api.openweathermap.org/data/2.5/weather?q=';
 var city = "irvine";
-//var key = "eb1566ac55549b1221d3b4722f59c341";
 var utcCorrection = -28800 + 3600;
 var lat = "";
 var lon = "";
 var timeZone = "";
-function apiCall (){
-  fetch(`/api/weather/${city}`)
-    .then(response => response.json())
-    .then(data => {
-      populateWeather(data)
-    })
-    .catch(err => console.error(err));
-}
-apiCall()
 
+fetch(`/api/weather/${city}`)
+  .then(response => response.json())
+  .then(data => {
+    populateWeather(data)
+  })
+  .catch(err => console.error(err));
 
-
-// $.ajax({
-//   method: "GET",
-//   url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
-//   dataType: "json",
-//   success: function (data) {
-//     populateWeather(data);
-
-//   },
-//   error: function (error) {
-//     console.error(error);
-//   }
-// })
 
 function populateWeather(dualObject) {
   var main = document.querySelector("#main");
@@ -66,55 +48,22 @@ function updateCityAndMakeClock(){
       lon = data.weatherData.coord.lon;
       utcCorrection = data.timeData.rawOffset;
       timeZone = data.timeData.timeZoneName;
+      console.log(data);
     })
     .catch(err => console.error(err));
 }
-
-
-// function updateCity() {
-//   city = "" + $("#input").val();
-//   $.ajax({
-//     method: "GET",
-//     url: path + city + "&units=metric&appid=eb1566ac55549b1221d3b4722f59c341",
-//     dataType: "json",
-//     success: function (data) {
-//       populateWeather(data);
-//       lat = data.coord.lat;
-//       lon = data.coord.lon;
-//       makeClock();
-//     },
-//     error: function (error) {
-//       console.error(error);
-//     }
-//   })
-//   $("#input").val("");
-// }
-
-// function makeClock() {
-//   $.ajax({
-//     method: "GET",
-//     url: "https://maps.googleapis.com/maps/api/timezone/json?location=" + lat + "," + lon + "&timestamp=1331161200&key=AIzaSyAc3qe0sMBZbWtNKCu1s4fQfAh4R6Up4wo",
-//     success: function (data) {
-//       utcCorrection = data.rawOffset;
-//       timeZone = data.timeZoneName;
-//     },
-//     error: function (error) {
-//       console.error(error);
-//     }
-//   })
-// }
 
 function showTime() {
   var date = new Date();
   var h = date.getHours();
   var correctedH = h + 7 + (utcCorrection / 3600);
-console.log(date);
+console.log(timeZone);
   switch (timeZone) {
     case "Eastern Standard Time":
-    case "Mountain Standard Time":
     case "Pacific Standard Time":
     case "Alaska Standard Time":
-    case "Hawaii-Aleutian Standard Time":
+    case "Greenwich Mean Time":
+    case "Central Standard Time":
       correctedH = correctedH + 1;
   }
 
