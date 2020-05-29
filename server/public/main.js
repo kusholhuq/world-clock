@@ -151,12 +151,20 @@ function applyBackground() {
   body.setAttribute('class', backgrounds[currentIndex]);
 }
 
-function cycleBackgroundForward(){
+function cycleBackgroundForward(event){
   currentIndex++;
+  console.log(currentIndex)
   applyBackground();
 }
 
-function cycleBackgroundBack(){
+function cycleBackgroundBack(event){
   currentIndex--;
+  console.log(currentIndex)
   applyBackground();
 }
+
+var left = document.querySelector("#left");
+var right = document.querySelector("#right");
+
+left.addEventListener("click", cycleBackgroundBack);
+right.addEventListener("click", cycleBackgroundForward);

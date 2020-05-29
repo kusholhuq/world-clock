@@ -90,21 +90,25 @@ input {
 }
 
 .neon{
-  background-image: url(assets/maybe.png);
+  background-image: url(assets/neon.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .sky{
-  background-image: url(assets/maybe.png);
+  background-image: url(assets/stars.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .sea{
-  background-image: url(assets/maybe.png);
+  background-image: url(assets/sea.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.background-slider{
+
 }
 
 .pink{
