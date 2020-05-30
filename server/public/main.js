@@ -136,3 +136,35 @@ function handleRain(event) {
     box[i].classList.remove("pink");
   }
 }
+
+const backgrounds = ['neon', 'sky', 'sea']
+let currentIndex = 0;
+
+function checkFont(){
+  //if current index equals this this or this
+  //make font colors white or black in response
+  //and make squares diff color in response
+  //can do a switch statement
+}
+
+function applyBackground() {
+  body.setAttribute('class', backgrounds[currentIndex]);
+}
+
+function cycleBackgroundForward(event){
+  currentIndex++;
+  console.log(currentIndex)
+  applyBackground();
+}
+
+function cycleBackgroundBack(event){
+  currentIndex--;
+  console.log(currentIndex)
+  applyBackground();
+}
+
+var left = document.querySelector("#left");
+var right = document.querySelector("#right");
+
+left.addEventListener("click", cycleBackgroundBack);
+right.addEventListener("click", cycleBackgroundForward);
