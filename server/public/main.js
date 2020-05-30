@@ -89,16 +89,16 @@ setInterval(showTime, 1000);
 
 var body = document.body;
 var box = document.querySelectorAll(".box");
-var dark = document.querySelector("#dark");
-var water = document.querySelector("#water");
-var lights = document.querySelector("#lights");
-var rain = document.querySelector("#rain");
+// var dark = document.querySelector("#dark");
+// var water = document.querySelector("#water");
+// var lights = document.querySelector("#lights");
+// var rain = document.querySelector("#rain");
 var input = document.getElementById("input");
 
-dark.addEventListener("click", handleDark);
-water.addEventListener("click", handleWater);
-lights.addEventListener("click", handleLights);
-rain.addEventListener("click", handleRain);
+// dark.addEventListener("click", handleDark);
+// water.addEventListener("click", handleWater);
+// lights.addEventListener("click", handleLights);
+// rain.addEventListener("click", handleRain);
 
 function handleDark(event) {
   body.setAttribute("class", "dark");
@@ -137,7 +137,7 @@ function handleRain(event) {
   }
 }
 
-const backgrounds = ['neon', 'sky', 'sea']
+const backgrounds = ['neon', 'sky', 'sea', 'beach']
 let currentIndex = 0;
 
 function checkFont(){
@@ -150,7 +150,7 @@ function checkFont(){
 function applyBackground() {
   body.setAttribute('class', backgrounds[currentIndex]);
 }
-
+applyBackground();
 function cycleBackgroundForward(event){
   currentIndex++;
   console.log(currentIndex)

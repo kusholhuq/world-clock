@@ -107,8 +107,14 @@ input {
   background-repeat: no-repeat;
 }
 
-.background-slider{
+.beach{
+  background-image: url(assets/beach.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.background-slider{
+  position: relative;
 }
 
 .pink{
