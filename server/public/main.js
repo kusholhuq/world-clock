@@ -137,7 +137,7 @@ function handleRain(event) {
   }
 }
 
-const backgrounds = ['neon', 'sky', 'sea', 'beach']
+const backgrounds = ['cityRain', 'haze', 'leaf','lights', 'meteor', 'rain', 'stars', 'sun','watering']
 let currentIndex = 0;
 
 function checkFont(){

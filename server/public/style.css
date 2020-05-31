@@ -66,51 +66,69 @@ input {
   background-color: lightcoral;
 }
 
-.rain{
-  background-image:url(assets/possible.jpg);
-  background-size: cover;
-}
-
-.bright{
-  background-image: url(assets/maybe.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .dark{
   background-color: black;
   color: white;
 }
 
+
+.cityRain{
+  background-image: url(assets/cityrain.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all .25s ease-in-out;
+}
+
+.haze{
+  background-image: url(assets/haze.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all .25s ease-in-out;
+}
+.leaf{
+  background-image: url(assets/leaf.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all .25s ease-in-out;
+}
 .lights{
-  background-image: url(assets/Dark\ background.jfif);
+  background-image: url(assets/lights.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
+  transition: all .25s ease-in-out;
 }
 
-.neon{
-  background-image: url(assets/neon.jpg);
+.meteor{
+  background-image: url(assets/meteor.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  transition: all .25s ease-in-out;
 }
-
-.sky{
+.rain{
+  background-image: url(assets/rain.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all .25s ease-in-out;
+}
+.stars{
   background-image: url(assets/stars.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  color:white;
+  transition: all .25s ease-in-out;
 }
-
-.sea{
-  background-image: url(assets/sea.jpg);
+.sun{
+  background-image: url(assets/sun.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  color:white;
+  transition: all .25s ease-in-out;
 }
-
-.beach{
-  background-image: url(assets/beach.jpg);
+.watering{
+  background-image: url(assets/watering.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  transition: all .25s ease-in-out;
 }
 
 .background-slider{
