@@ -24,6 +24,7 @@ flex-wrap: wrap;
 
 }
 
+
 .v-align{
 position: relative;
 top: 10%;
@@ -65,9 +66,16 @@ input {
   border-color: rgba(0,0,0,0);
   border-radius: 5px;
 }
+.col-bar{
+  flex-basis: 40%;
+  text-align: center;
+  background-color: rgba(255,182,193 ,.4 );
+  flex-wrap: wrap;
+
+}
 .input-bar{
   text-align: center;
-  opacity: .5;
+  background-color: rgba(255,182,193 ,0 );
 }
 
 .push-down-submit{
