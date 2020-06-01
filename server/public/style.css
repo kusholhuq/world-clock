@@ -216,6 +216,7 @@ button{
 body{
 margin: 0;
 height: 667px;
+overflow: hidden;
 }
 }
 
