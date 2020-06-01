@@ -17,6 +17,12 @@ flex-wrap: wrap;
   border-radius: 10px;
   margin-top: 1rem;
 }
+.col-title{
+  flex-basis: 100%;
+  text-align: center;
+  background-color: rgba(255,182,193 ,.4 );
+
+}
 
 .v-align{
 position: relative;
