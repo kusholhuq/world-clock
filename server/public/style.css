@@ -65,6 +65,10 @@ input {
   border-color: rgba(0,0,0,0);
   border-radius: 5px;
 }
+.input-bar{
+  text-align: center;
+  opacity: .5;
+}
 
 .push-down-submit{
   position: relative;
