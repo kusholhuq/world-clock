@@ -56,7 +56,7 @@ top: 4vh;
 }
 
 .col-12{
-flex-basis: 100%;
+flex-basis: 50%;
 text-align: center;
 }
 
@@ -67,7 +67,8 @@ input {
   border-radius: 5px;
 }
 .col-bar{
-  flex-basis: 40%;
+  display: flex;
+  flex-basis: 20%;
   text-align: center;
   background-color: rgba(255,182,193 ,.4 );
   flex-wrap: wrap;

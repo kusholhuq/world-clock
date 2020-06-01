@@ -11,39 +11,49 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
 
 
 
 </head>
 
-<body >
+<body>
   <!-- cool -->
   <div class="row">
     <div class="col-title s-height">
-      <div class="v-align">
-        <h2 id="title" class="mt-1">World Clock</h2>
+      <div class="v-align d-flex justify-content-around">
+        <i class="fas fa-2x fa-chevron-left mt-3 grey-color" id="left"></i>
+        <h2 id="title" class="mt-2">World Clock</h2>
+        <i class="fas fa-2x fa-chevron-right mt-3 grey-color" id="right"></i>
       </div>
     </div>
-  </div>
-  <div class="row">
-  <div class="col-bar s-height box form-inline">
-    <div class="form-group col-bar">
-      <input class="form-control input-bar" type="text" id="city" placeholder="City">
-      <input id="submit" type="submit" class="">
-    </div>
-  </div>
   </div>
   <!-- cool -->
   <div class="container">
 
     <div class="row">
+      <div class="col-6 m-height box">
+        <div class="v-align">
+          <h2 id="city">City</h2>
+          <p id="country">Country</p>
+        </div>
+
+      </div>
+      <div class="col-6 m-height box">
+        <div class="v-align">
+
+          <input class="push-down-input" type="text" id="city" placeholder="City">
+          <input id="submit" type="submit" class="push-down-submit pointer">
+
+        </div>
+      </div>
       <div class="col-6 m-height box">
         <div class="v-align">
           <h2 id="main">Main</h2>
@@ -72,21 +82,7 @@
         </div>
 
       </div>
-      <div class="col-6 m-height box">
-        <div class="v-align">
-          <h2 id="city">City</h2>
-          <p id="country">Country</p>
-        </div>
 
-      </div>
-      <div class="col-6 m-height box">
-        <div class="v-align">
-
-          <input class="push-down-input" type="text" id="city" placeholder="City">
-          <input id="submit" type="submit" class="push-down-submit pointer"></input>
-
-        </div>
-      </div>
     </div>
     <div class="row push-up local">
       <div class="col-12 ">
@@ -94,17 +90,12 @@
         <p id="currentTime">time</p>
       </div>
     </div>
-        <div class="row push-up-more foreign">
-          <div class="col-12">
-            <p><strong>Selected City</strong> </p>
-            <p id="UTCtime">time</p>
-          </div>
-          <div class="background-slider">
-            <i class="fas fa-2x fa-chevron-left mt-3 grey-color" id="left"></i>
-            Background
-            <i class="fas fa-2x fa-chevron-right mt-3 grey-color" id="right"></i>
-          </div>
-        </div>
+    <div class="row push-up-more foreign">
+      <div class="col-12">
+        <p><strong>Selected City</strong> </p>
+        <p id="UTCtime">time</p>
+      </div>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
