@@ -37,8 +37,13 @@
       </div>
       <div class="col-6 m-height box">
         <div class="v-align">
-          <input class="push-down-input" type="text" id="input" placeholder="City">
-          <input id="submit" type="submit" class="push-down-submit pointer">
+          <div id="confirm" class="mb-2">
+            <input class="push-down-input" type="text" id="input" placeholder="City">
+            <input id="submit" type="submit" class="push-down-submit pointer">
+          </div>
+          <div class="spinner-border text-light mt-4 hidden" role="status" id="spin">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
       </div>
       <div class="col-6 m-height box">

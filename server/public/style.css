@@ -59,6 +59,7 @@ transition: all ease .4s;
 input.push-down-input{
 position: relative;
 top: 4vh;
+color: white;
 }
 
 .col-12{
@@ -288,4 +289,15 @@ div.col-12 p{
 div.col-12 {
   display: flex;
 }
+}
+
+.spinner-border{
+  position: relative;
+  top: 1vh;
+  width: 3rem;
+  height:3rem;
+}
+
+.hidden {
+  display: none;
 }

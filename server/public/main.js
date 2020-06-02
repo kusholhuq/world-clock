@@ -38,7 +38,14 @@ function populateWeather(dualObject) {
 var submit = document.querySelector("#submit");
 submit.addEventListener("click", updateCityAndMakeClock);
 
+
 function updateCityAndMakeClock(){
+  var confirm = document.querySelector('#confirm');
+  var spin = document.querySelector('#spin');
+  console.log(confirm)
+  console.log(spin)
+  confirm.classList.add('hidden');
+  spin.classList.remove('hidden');
   city = "" + $("#input").val();
   fetch(`/api/weather/${city}`)
     .then(response => response.json())
@@ -48,8 +55,14 @@ function updateCityAndMakeClock(){
       lon = data.weatherData.coord.lon;
       utcCorrection = data.timeData.rawOffset;
       timeZone = data.timeData.timeZoneName;
+      spin.classList.add('hidden');
+      confirm.classList.remove('hidden');
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      console.error(err);
+      spin.classList.add('hidden');
+      confirm.classList.remove('hidden');
+    });
 }
 
 function showTime() {
@@ -97,7 +110,7 @@ function applyBackground() {
   body.setAttribute('class', backgrounds[currentIndex]);
 }
 applyBackground();
-function cycleBackgroundForward(event){
+function cycleBackgroundForward(){
   currentIndex++;
   if (currentIndex>5){
     currentIndex=0;
@@ -108,7 +121,7 @@ function cycleBackgroundForward(event){
   applyBackground();
 }
 
-function cycleBackgroundBack(event){
+function cycleBackgroundBack(){
   currentIndex--;
   if (currentIndex > 5) {
     currentIndex = 0;
