@@ -289,3 +289,15 @@ div.col-12 {
   display: flex;
 }
 }
+
+.spinner-border{
+  position: relative;
+  top: 1vh;
+  width: 3rem;
+  height:3rem;
+  color: pink;
+}
+
+.hidden {
+  display: none;
+}
