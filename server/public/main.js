@@ -48,7 +48,6 @@ function updateCityAndMakeClock(){
       lon = data.weatherData.coord.lon;
       utcCorrection = data.timeData.rawOffset;
       timeZone = data.timeData.timeZoneName;
-      console.log(data);
     })
     .catch(err => console.error(err));
 }
