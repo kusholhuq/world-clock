@@ -66,10 +66,14 @@ text-align: center;
 }
 
 input {
-  background-color: rgba(0,0,0,.1);
+  background-color: rgba(255,255,255 ,.0);
   width: 80%;
   border-color: rgba(0,0,0,0);
   border-radius: 5px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:white;
+  opacity: 1; /* Firefox */
 }
 .col-bar{
   display: flex;
@@ -101,6 +105,7 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
   transition: all .25s ease-in-out;
+  color:white;
 }
 
 .haze{
@@ -113,13 +118,16 @@ input {
   background-image: url(assets/leaf.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  color:white;
   transition: all .25s ease-in-out;
+
 }
 .lights{
   background-image: url(assets/lights.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   transition: all .25s ease-in-out;
+
 }
 
 .meteor{
@@ -153,6 +161,7 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
   transition: all .25s ease-in-out;
+  color:white;
 }
 
 .background-slider{

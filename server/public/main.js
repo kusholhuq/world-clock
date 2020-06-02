@@ -137,7 +137,7 @@ function handleRain(event) {
   }
 }
 
-const backgrounds = ['cityRain', 'haze', 'leaf','lights', 'meteor','stars', 'sun','watering']
+const backgrounds = ['stars','haze', 'leaf','lights', 'meteor', 'sun']
 let currentIndex = 0;
 
 function checkFont(){
@@ -153,11 +153,11 @@ function applyBackground() {
 applyBackground();
 function cycleBackgroundForward(event){
   currentIndex++;
-  if (currentIndex>7){
+  if (currentIndex>5){
     currentIndex=0;
   }
   if(currentIndex<0){
-    currentIndex=7;
+    currentIndex=5;
   }
   console.log(currentIndex)
   applyBackground();
@@ -165,11 +165,11 @@ function cycleBackgroundForward(event){
 
 function cycleBackgroundBack(event){
   currentIndex--;
-  if (currentIndex > 7) {
+  if (currentIndex > 5) {
     currentIndex = 0;
   }
   if (currentIndex < 0) {
-    currentIndex = 7;
+    currentIndex = 5;
   }
   console.log(currentIndex)
   applyBackground();
