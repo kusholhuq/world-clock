@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>World Clock</title>
-
   <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2|Montserrat&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;900&display=swap"
@@ -18,40 +16,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
-
-
-
-
 </head>
-
 <body>
-<!-- cool -->
-<div class="row">
-  <div class="col-title s-height">
-    <div class="v-align d-flex justify-content-around">
-      <i class="fas fa-2x fa-chevron-left mt-1 grey-color" id="left"></i>
-      <h1 id="title" class="mt-1">World Clock</h2>
-      <i class="fas fa-2x fa-chevron-right mt-1 grey-color" id="right"></i>
+  <div class="row">
+    <div class="col-title s-height">
+      <div class="v-align d-flex justify-content-around">
+        <i class="fas fa-2x fa-chevron-left mt-1 grey-color pointer" id="left"></i>
+        <h1 id="title" class="mt-1">World Clock</h1>
+          <i class="fas fa-2x fa-chevron-right mt-1 grey-color pointer" id="right"></i>
+      </div>
     </div>
   </div>
-</div>
-<!-- cool -->
   <div class="container">
-
     <div class="row">
       <div class="col-6 m-height box">
         <div class="v-align">
           <h2 id="city">City</h2>
           <p id="country">Country</p>
         </div>
-
       </div>
       <div class="col-6 m-height box">
         <div class="v-align">
-
           <input class="push-down-input" type="text" id="input" placeholder="City">
           <input id="submit" type="submit" class="push-down-submit pointer">
-
         </div>
       </div>
       <div class="col-6 m-height box">
@@ -59,57 +46,38 @@
           <h2 id="main">Main</h2>
           <p id="mainDescription">20%</p>
         </div>
-
       </div>
       <div class="col-6 m-height box col-2">
         <div class="v-align">
           <h2>Temp</h2>
           <p id="temp">69 degrees </p>
         </div>
-
       </div>
       <div class="col-6 m-height box">
         <div class="v-align">
           <h2>Wind</h2>
           <p id="wind">30mph</p>
         </div>
-
       </div>
       <div class="col-6 m-height box col-2">
         <div class="v-align">
           <h2>Humidity</h2>
           <p id="humidity">71%</p>
         </div>
-
       </div>
       <div class="col-6 m-height box col-2">
         <div class="v-align">
           <h2>Local Time</h2>
           <p id="currentTime">time</p>
         </div>
-
       </div>
       <div class="col-6 m-height box col-2">
         <div class="v-align">
           <h2>Selected City</h2>
           <p id="UTCtime">time</p>
         </div>
-
       </div>
-
     </div>
-    <!-- <div class="row push-up local">
-      <div class="col-12 ">
-        <p> <strong>Selected City</strong> </p>
-        <p id="UTCtime">time</p>
-      </div>
-    </div> -->
-    <!-- <div class="row push-up-more foreign">
-      <div class="col-12">
-        <p><strong>Selected City</strong> </p>
-        <p id="UTCtime">time</p>
-      </div>
-    </div> -->
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
