@@ -110,7 +110,7 @@ function applyBackground() {
   body.setAttribute('class', backgrounds[currentIndex]);
 }
 applyBackground();
-function cycleBackgroundForward(event){
+function cycleBackgroundForward(){
   currentIndex++;
   if (currentIndex>5){
     currentIndex=0;
@@ -121,7 +121,7 @@ function cycleBackgroundForward(event){
   applyBackground();
 }
 
-function cycleBackgroundBack(event){
+function cycleBackgroundBack(){
   currentIndex--;
   if (currentIndex > 5) {
     currentIndex = 0;
