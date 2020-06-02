@@ -9,12 +9,15 @@ justify-content: space-evenly;
 margin: 0vh 0;
 flex-wrap: wrap;
 }
+
 h2{
   font-size: 22px;
 }
+
 h1{
   font-size: 28px;
 }
+
 .col-6{
   flex-basis: 40%;
   text-align: center;
@@ -26,9 +29,7 @@ h1{
   flex-basis: 100%;
   text-align: center;
   background-color: rgba(255,182,193 ,.4 );
-
 }
-
 
 .v-align{
 position: relative;
@@ -71,9 +72,9 @@ input {
   border-color: rgba(0,0,0,0);
   border-radius: 5px;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
   color:white;
-  opacity: 1; /* Firefox */
+  opacity: 1;
 }
 .col-bar{
   display: flex;
@@ -99,7 +100,6 @@ input {
   color: white;
 }
 
-
 .cityRain{
   background-image: url(assets/cityrain.jpg);
   background-size: cover;
@@ -122,12 +122,12 @@ input {
   transition: all .25s ease-in-out;
 
 }
+
 .lights{
   background-image: url(assets/lights.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   transition: all .25s ease-in-out;
-
 }
 
 .meteor{
@@ -136,12 +136,14 @@ input {
   background-repeat: no-repeat;
   transition: all .25s ease-in-out;
 }
+
 .rain{
   background-image: url(assets/rain.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   transition: all .25s ease-in-out;
 }
+
 .stars{
   background-image: url(assets/stars.jpg);
   background-size: cover;
@@ -149,6 +151,7 @@ input {
   color:white;
   transition: all .25s ease-in-out;
 }
+
 .sun{
   background-image: url(assets/sun.jpg);
   background-size: cover;
@@ -156,6 +159,7 @@ input {
   color:white;
   transition: all .25s ease-in-out;
 }
+
 .watering{
   background-image: url(assets/watering.jpg);
   background-size: cover;
