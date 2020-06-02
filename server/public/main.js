@@ -39,7 +39,7 @@ var submit = document.querySelector("#submit");
 submit.addEventListener("click", updateCityAndMakeClock);
 
 function updateCityAndMakeClock(){
-  city = "" + $("#city").val();
+  city = "" + $("#input").val();
   fetch(`/api/weather/${city}`)
     .then(response => response.json())
     .then(data => {
