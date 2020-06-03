@@ -60,6 +60,7 @@ input.push-down-input{
 position: relative;
 top: 4vh;
 color: white;
+background: rgba(255,255,255,.3);
 }
 
 .col-12{
@@ -73,18 +74,20 @@ input {
   border-color: rgba(0,0,0,0);
   border-radius: 5px;
 }
+
 ::placeholder {
   color:white;
   opacity: 1;
 }
+
 .col-bar{
   display: flex;
   flex-basis: 20%;
   text-align: center;
   background-color: rgba(255,182,193 ,.4 );
   flex-wrap: wrap;
-
 }
+
 .input-bar{
   text-align: center;
   background-color: rgba(255,182,193 ,0 );
@@ -110,18 +113,19 @@ input {
 }
 
 .haze{
-  background-image: url(assets/haze.jpg);
+  background-image: url(assets/hiHaze.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   transition: all .25s ease-in-out;
+  color: white;
 }
+
 .leaf{
-  background-image: url(assets/leaf.jpg);
+  background-image: url(assets/hiLeaf.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color:white;
   transition: all .25s ease-in-out;
-
 }
 
 .lights{
@@ -146,7 +150,7 @@ input {
 }
 
 .stars{
-  background-image: url(assets/stars.jpg);
+  background-image: url(assets/hiStars.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color:white;
@@ -154,7 +158,7 @@ input {
 }
 
 .sun{
-  background-image: url(assets/sun.jpg);
+  background-image: url(assets/sun2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color:white;
@@ -212,83 +216,14 @@ button{
   position: relative;
   bottom: 2vh;
 }
+
 .push-up-more{
   position: relative;
   bottom: 7vh;
 }
+
 .theme-btns{
   font-size: 17px;
-}
-
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-}
-
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-
-body{
-margin: 0;
-height: 667px;
-overflow: hidden;
-}
-}
-
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
-body{
-  width: 667px;
-  height: 375px;
-  overflow: hidden;
-}
-
-.col-6{
-  flex-basis: 40%;
-  height: 9rem;
-  position: relative;
-  margin-left: 1.7rem;
-  top: 1rem;
-  justify-content: left;
-}
-
-.row{
-  justify-content: left;
-}
-
-.row.push-up{
-  position: absolute;
-  top: 10rem;
-  left: 20rem;
-}
-
-.row.push-up.foreign{
-  left: 29rem;
-  top: 15rem;
-}
-
-.row.push-up.local{
-  left: 29rem;
-  top: 5rem;
-}
-
-div.col-12 p{
-  width:200px;
-  display: flex;
-  margin:0;
-}
-
-div.col-12 {
-  display: flex;
-}
 }
 
 .spinner-border{
@@ -297,6 +232,139 @@ div.col-12 {
   width: 3rem;
   height:3rem;
 }
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .haze{
+      background-image: url(assets/haze2.jpg);
+    }
+    .leaf{
+      background-image: url(assets/leaf.jpg);
+    }
+    .stars{
+      background-image: url(assets/stars.jpg);
+    }
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+  body{
+  margin: 0;
+  height: 667px;
+  overflow: hidden;
+  }
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+
+  body{
+    width: 667px;
+    height: 375px;
+    overflow: hidden;
+  }
+
+  .col-6{
+    flex-basis: 18%;
+    height: 8rem;
+    position: relative;
+    margin:.5rem;
+    justify-content: space-around;
+    overflow: hidden;
+  }
+
+  .col-title{
+    height: 3.5rem;
+  }
+
+  .extraMarginTop{
+    margin-top: 1.5rem;
+  }
+
+  .row{
+    flex-basis: 100%;
+    width: 667px;
+    overflow: hidden;
+  }
+
+  div.container{
+  width: 667px;
+  }
+}
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .haze{
+    background-image: url(assets/haze2.jpg);
+  }
+
+  .leaf{
+    background-image: url(assets/leaf.jpg);
+  }
+
+  .stars{
+    background-image: url(assets/stars.jpg);
+  }
+
+  h2{
+    font-size: 40px;
+  }
+
+  p{
+    font-size: 30px;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+  .col-title{
+    height: 5rem;
+  }
+
+  .fas{
+    position: relative;
+    top: .75rem;
+  }
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .ipadMT{
+    margin-top:1rem;
+  }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
 
 .hidden {
   display: none;
