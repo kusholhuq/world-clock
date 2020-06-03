@@ -1,6 +1,8 @@
 var city = "irvine";
 var utcCorrection = -28800 + 3600;
 var timeZone = "";
+var lat = "";
+var lon = "";
 
 fetch(`/api/weather/${city}`)
   .then(response => response.json())
