@@ -219,6 +219,12 @@ button{
 .theme-btns{
   font-size: 17px;
 }
+.spinner-border{
+  position: relative;
+  top: 1vh;
+  width: 3rem;
+  height:3rem;
+}
 
 @media only screen
   and (min-device-width: 375px)
@@ -245,6 +251,7 @@ overflow: hidden;
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
+
 body{
   width: 667px;
   height: 375px;
@@ -252,18 +259,35 @@ body{
 }
 
 .col-6{
-  flex-basis: 40%;
-  height: 9rem;
+  flex-basis: 18%;
+  height: 8rem;
   position: relative;
-  margin-left: 1.7rem;
-  top: 1rem;
-  justify-content: left;
+  margin:.5rem;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.col-title{
+  height: 3.5rem;
+}
+
+.extraMarginBottom{
+  margin-bottom: 0rem;
+}
+.extraMarginTop{
+  margin-top: 1.5rem;
 }
 
 .row{
-  justify-content: left;
+  flex-basis: 100%;
+  width: 667px;
+  overflow: hidden;
 }
 
+div.container{
+width: 667px;
+
+}
+/*
 .row.push-up{
   position: absolute;
   top: 10rem;
@@ -288,15 +312,11 @@ div.col-12 p{
 
 div.col-12 {
   display: flex;
-}
+} */
+
 }
 
-.spinner-border{
-  position: relative;
-  top: 1vh;
-  width: 3rem;
-  height:3rem;
-}
+
 
 .hidden {
   display: none;
