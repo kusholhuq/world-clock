@@ -111,14 +111,14 @@ input {
 }
 
 .haze{
-  background-image: url(assets/haze2.jpg);
+  background-image: url(assets/hiHaze.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   transition: all .25s ease-in-out;
   color: white;
 }
 .leaf{
-  background-image: url(assets/leaf.jpg);
+  background-image: url(assets/hiLeaf.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color:white;
@@ -148,7 +148,7 @@ input {
 }
 
 .stars{
-  background-image: url(assets/stars.jpg);
+  background-image: url(assets/hiStars.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color:white;
@@ -232,6 +232,15 @@ button{
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
+    .haze{
+  background-image: url(assets/haze2.jpg);
+}
+.leaf{
+  background-image: url(assets/leaf.jpg);
+}
+.stars{
+  background-image: url(assets/stars.jpg);
+}
 }
 
 @media only screen
@@ -294,6 +303,15 @@ width: 667px;
   and (min-device-width: 768px)
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2) {
+    .haze{
+  background-image: url(assets/haze2.jpg);
+}
+.leaf{
+  background-image: url(assets/leaf.jpg);
+}
+.stars{
+  background-image: url(assets/stars.jpg);
+}
 h2{
   font-size: 40px;
 }
@@ -311,12 +329,7 @@ h1{
   position: relative;
   top: .75rem;
 }
-.haze{
-  background-image: url(assets/haze2.jpg);
- background-size: cover;
-   /* background-repeat: no-repeat;
-  transition: all .25s ease-in-out; */
-}
+
 }
 
 /* Portrait */
