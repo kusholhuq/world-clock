@@ -42,8 +42,6 @@ submit.addEventListener("click", updateCityAndMakeClock);
 function updateCityAndMakeClock(){
   var confirm = document.querySelector('#confirm');
   var spin = document.querySelector('#spin');
-  console.log(confirm)
-  console.log(spin)
   confirm.classList.add('hidden');
   spin.classList.remove('hidden');
   city = "" + $("#input").val();
@@ -69,7 +67,6 @@ function showTime() {
   var date = new Date();
   var h = date.getHours();
   var correctedH = h + 7 + (utcCorrection / 3600);
-console.log(timeZone);
   switch (timeZone) {
     case "Eastern Standard Time":
     case "Pacific Standard Time":
@@ -85,8 +82,18 @@ console.log(timeZone);
   if (correctedH < 0) {
     correctedH = correctedH + 24;
   }
+  if(correctedH <10) {
+    correctedH = 0 + "" + correctedH;
+  }
+
   var m = date.getMinutes();
   var s = date.getSeconds();
+  if (m < 10) {
+    m = 0 + "" + m;
+  }
+  if (s < 10) {
+    s = 0 + "" + s;
+  }
   var time = h + ":" + m + ":" + s;
   var foreignTime = correctedH + ":" + m + ":" + s;
 
@@ -137,3 +144,14 @@ var right = document.querySelector("#right");
 
 left.addEventListener("click", cycleBackgroundBack);
 right.addEventListener("click", cycleBackgroundForward);
+
+if (input.value.length != 0)
+  submit.disabled = false;
+else
+  submit.disabled = true;
+setInterval(function () {
+  if (input.value.length != 0)
+    submit.disabled = false;
+  else
+    submit.disabled = true;
+}, 500);
