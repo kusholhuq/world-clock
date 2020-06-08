@@ -13,6 +13,13 @@ https://world-clock.kusholhuq.com/
   - CSS3
   - JavaScript (ES6)
   - jQuery
+  - Bootstrap4
+  - Node.js
+  - Express
+  - Node Fetch
+  - dotenv
+  - NPM
+  - AWS EC2
   - [**Open Weather API**](https://openweathermap.org/current)
   - [**Google Time Zone API**](https://developers.google.com/maps/documentation/timezone/start?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_433476780412-ADGP_Hybrid+%7C+AW+SEM+%7C+SKWS+~+Time+Zone+API-KWID_43700039136946363-kwd-538188851010-userloc_9061184&utm_term=KW_%2Btime%20%2Bzone%20%2Bapi-ST_%2Btime+%2Bzone+%2Bapi&gclid=EAIaIQobChMIlfKxp8q-6QIVfPvjBx2Spw0_EAAYASAAEgJuYPD_BwE)
 
@@ -23,13 +30,47 @@ https://world-clock.kusholhuq.com/
  1. User can select theme of their liking.
 
  ## Preview
- <img src="assets/gif.gif">
+ <img src="./server/public/assets/gif2.gif">
 
  ## Development
+
+ ### System Requirements
+- NPM 6 or higher
+- Node.js 10 or higher
+
+ ### API Requirements
+ To run this app locally, you will need [**OpenWeather**](https://openweathermap.org/current) and [**Google Time Zone**]((https://developers.google.com/maps/documentation/timezone/start?utm_source=google&utm_medium=cpc&utm_campaign=FY18-Q2-global-demandgen-paidsearchonnetworkhouseads-cs-maps_contactsal_saf&utm_content=text-ad-none-none-DEV_c-CRE_433476780412-ADGP_Hybrid+%7C+AW+SEM+%7C+SKWS+~+Time+Zone+API-KWID_43700039136946363-kwd-538188851010-userloc_9061184&utm_term=KW_%2Btime%20%2Bzone%20%2Bapi-ST_%2Btime+%2Bzone+%2Bapi&gclid=EAIaIQobChMIlfKxp8q-6QIVfPvjBx2Spw0_EAAYASAAEgJuYPD_BwE)) accounts and API keys.
+
  ### Getting Started
+ If you would like to use this application locally, please follow the steps below:
+
  1. Clone the repository
     ``` bash
     git clone https://github.com/kusholhuq/world-clock
     cd world-clock
     ```
- 1. Open the project in your default browser
+2. Install all dependencies with **NPM**.
+
+   ```shell
+   npm install
+   ```
+3. Create a new **.env** file in the root directory of the project that will house your server port and **Google API key**.
+
+   ```shell
+   touch .env
+   ```
+4. In your new file, add the information below,    replacing the value of ```WEATHER_KEY``` and ```TIME_KEY``` with your personal api keys. Save the changes to your **.env** file.
+
+   ```
+   PORT=3000
+   WEATHER_KEY=(your api key here)
+   TIME_KEY=(your api key here)
+   ```
+
+6. Start your **Node** server.
+
+   ```shell
+   npm run start
+   ```
+
+7. In your browser, navigate to [http://localhost:3000](http://localhost:3000).
