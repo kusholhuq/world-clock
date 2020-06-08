@@ -137,3 +137,14 @@ var right = document.querySelector("#right");
 
 left.addEventListener("click", cycleBackgroundBack);
 right.addEventListener("click", cycleBackgroundForward);
+
+if (input.value.length != 0)
+  submit.disabled = false;
+else
+  submit.disabled = true;
+setInterval(function () {
+  if (input.value.length != 0)
+    submit.disabled = false;
+  else
+    submit.disabled = true;
+}, 500);
