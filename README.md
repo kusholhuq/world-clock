@@ -67,10 +67,10 @@ https://world-clock.kusholhuq.com/
    TIME_KEY=(your api key here)
    ```
 
-6. Start your **Node** server.
+5. Start your **Node** server.
 
    ```shell
    npm run start
    ```
 
-7. In your browser, navigate to [http://localhost:3000](http://localhost:3000).
+6. In your browser, navigate to [http://localhost:3000](http://localhost:3000).
