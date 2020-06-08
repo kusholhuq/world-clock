@@ -42,8 +42,6 @@ submit.addEventListener("click", updateCityAndMakeClock);
 function updateCityAndMakeClock(){
   var confirm = document.querySelector('#confirm');
   var spin = document.querySelector('#spin');
-  console.log(confirm)
-  console.log(spin)
   confirm.classList.add('hidden');
   spin.classList.remove('hidden');
   city = "" + $("#input").val();
@@ -69,7 +67,6 @@ function showTime() {
   var date = new Date();
   var h = date.getHours();
   var correctedH = h + 7 + (utcCorrection / 3600);
-console.log(timeZone);
   switch (timeZone) {
     case "Eastern Standard Time":
     case "Pacific Standard Time":
