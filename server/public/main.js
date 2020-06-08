@@ -82,8 +82,18 @@ function showTime() {
   if (correctedH < 0) {
     correctedH = correctedH + 24;
   }
+  if(correctedH <10) {
+    correctedH = 0 + "" + correctedH;
+  }
+
   var m = date.getMinutes();
   var s = date.getSeconds();
+  if (m < 10) {
+    m = 0 + "" + m;
+  }
+  if (s < 10) {
+    s = 0 + "" + s;
+  }
   var time = h + ":" + m + ":" + s;
   var foreignTime = correctedH + ":" + m + ":" + s;
 
