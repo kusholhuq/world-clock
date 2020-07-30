@@ -9,6 +9,15 @@ font-family: Montserrat;
   position: fixed;
   top: 40vh;
 }
+
+.black-background{
+  background-color: rgba(0,0,0,.3);
+  position: absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right:0;
+}
 .okay{
   background-image: linear-gradient(to right, rgba(252, 166, 81, .9) , rgba(246, 49, 55, .9));
 }
@@ -420,4 +429,8 @@ button{
 
 .hidden {
   display: none;
+}
+
+.black-background.hidden{
+  display:none;
 }
