@@ -104,6 +104,7 @@ input {
 ::placeholder {
   color:black;
   opacity: 1;
+  text-align: center;
 }
 
 .col-bar{
@@ -263,7 +264,7 @@ button{
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .haze{
+    /* .haze{
       background-image: url(assets/haze2.jpg);
     }
     .leaf{
@@ -271,7 +272,7 @@ button{
     }
     .stars{
       background-image: url(assets/stars.jpg);
-    }
+    } */
 }
 
 @media only screen
@@ -280,10 +281,19 @@ button{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-  body{
+  /* body{
   margin: 0;
   height: 667px;
   overflow: hidden;
+  } */
+  h1{
+    font-size: 5rem;
+  }
+  .orange{
+    padding: 0;
+  }
+  .holder{
+    margin:1rem;
   }
 }
 
@@ -293,39 +303,45 @@ button{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
-
-  body{
+    .landscape-phone{
+      position: relative;
+      bottom: 5rem;
+    }
+    h1{
+      font-size: 5rem;
+    }
+  /* body{
     width: 667px;
     height: 375px;
     overflow: hidden;
-  }
+  } */
 
-  .col-6{
+  /* .col-6{
     flex-basis: 18%;
     height: 8rem;
     position: relative;
     margin:.5rem;
     justify-content: space-around;
     overflow: hidden;
-  }
+  } */
 
-  .col-title{
+  /* .col-title{
     height: 3.5rem;
   }
 
   .extraMarginTop{
     margin-top: 1.5rem;
-  }
+  } */
 
-  .row{
+  /* .row{
     flex-basis: 100%;
     width: 667px;
     overflow: hidden;
-  }
+  } */
 
-  div.container{
+  /* div.container{
   width: 667px;
-  }
+  } */
 }
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
@@ -335,7 +351,7 @@ button{
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-  .haze{
+  /* .haze{
     background-image: url(assets/haze2.jpg);
   }
 
@@ -366,7 +382,7 @@ button{
   .fas{
     position: relative;
     top: .75rem;
-  }
+  } */
 
 }
 
@@ -377,9 +393,9 @@ button{
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-  .ipadMT{
+  /* .ipadMT{
     margin-top:1rem;
-  }
+  } */
 }
 
 /* Landscape */
