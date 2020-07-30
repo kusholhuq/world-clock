@@ -2,26 +2,61 @@
 font-family: Montserrat;
 }
 
-.row{
+.white-background{
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  position: fixed;
+  top: 40vh;
+}
+.okay{
+  background-image: linear-gradient(to right, rgba(252, 166, 81, .9) , rgba(246, 49, 55, .9));
+}
+.balloon{
+  background-image: url(./assets/balloons2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pac{
+  font-family: 'Pacifico', cursive;
+}
+.big-text{
+  font-size:1.5rem;
+}
+.orange{
+  background-image: linear-gradient(to right, rgba(252, 166, 81, .9) , rgba(246, 49, 55, .9));
+  border-radius: 10px;
+}
+.bold{
+  font-weight: bold;
+  color: white;
+}
+.holder{
+  width: 8rem;
+  height: 3rem;
+  margin: 2rem;
+  text-align: center;
+}
+/* .row{
 width: 100%;
 display: flex;
 justify-content: space-evenly;
 margin: 0vh 0;
 flex-wrap: wrap;
-}
+} */
 
 h2{
   font-size: 22px;
 }
 
 h1{
-  font-size: 28px;
+  font-size: 6rem;
 }
 
 .col-6{
   flex-basis: 40%;
   text-align: center;
-  background-color: rgba(255,182,193 ,.2 );
+  /* background-color: rgba(255,182,193 ,.2 ); */
   border-radius: 10px;
   margin-top: 1rem;
 }
@@ -59,8 +94,9 @@ transition: all ease .4s;
 input.push-down-input{
 position: relative;
 top: 4vh;
-color: white;
-background: rgba(255,255,255,.3);
+color: black;
+/* background: rgba(255,255,255,.3); */
+background:white;
 }
 
 .col-12{
@@ -76,8 +112,9 @@ input {
 }
 
 ::placeholder {
-  color:white;
+  color:black;
   opacity: 1;
+  text-align: center;
 }
 
 .col-bar{
@@ -98,7 +135,7 @@ input {
   top: 5vh;
   background-color: lightcoral;
 }
-
+/*
 .dark{
   background-color: black;
   color: white;
@@ -171,7 +208,7 @@ input {
   background-repeat: no-repeat;
   transition: all .25s ease-in-out;
   color:white;
-}
+} */
 
 .background-slider{
   position: relative;
@@ -237,7 +274,7 @@ button{
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .haze{
+    /* .haze{
       background-image: url(assets/haze2.jpg);
     }
     .leaf{
@@ -245,7 +282,7 @@ button{
     }
     .stars{
       background-image: url(assets/stars.jpg);
-    }
+    } */
 }
 
 @media only screen
@@ -254,10 +291,19 @@ button{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-  body{
+  /* body{
   margin: 0;
   height: 667px;
   overflow: hidden;
+  } */
+  h1{
+    font-size: 5rem;
+  }
+  .orange{
+    padding: 0;
+  }
+  .holder{
+    margin:1rem;
   }
 }
 
@@ -267,39 +313,45 @@ button{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
-
-  body{
+    .landscape-phone{
+      position: relative;
+      bottom: 5rem;
+    }
+    h1{
+      font-size: 5rem;
+    }
+  /* body{
     width: 667px;
     height: 375px;
     overflow: hidden;
-  }
+  } */
 
-  .col-6{
+  /* .col-6{
     flex-basis: 18%;
     height: 8rem;
     position: relative;
     margin:.5rem;
     justify-content: space-around;
     overflow: hidden;
-  }
+  } */
 
-  .col-title{
+  /* .col-title{
     height: 3.5rem;
   }
 
   .extraMarginTop{
     margin-top: 1.5rem;
-  }
+  } */
 
-  .row{
+  /* .row{
     flex-basis: 100%;
     width: 667px;
     overflow: hidden;
-  }
+  } */
 
-  div.container{
+  /* div.container{
   width: 667px;
-  }
+  } */
 }
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
@@ -309,7 +361,7 @@ button{
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-  .haze{
+  /* .haze{
     background-image: url(assets/haze2.jpg);
   }
 
@@ -340,7 +392,7 @@ button{
   .fas{
     position: relative;
     top: .75rem;
-  }
+  } */
 
 }
 
@@ -351,9 +403,9 @@ button{
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-  .ipadMT{
+  /* .ipadMT{
     margin-top:1rem;
-  }
+  } */
 }
 
 /* Landscape */

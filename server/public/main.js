@@ -38,6 +38,16 @@ function populateWeather(dualObject) {
 var submit = document.querySelector("#submit");
 submit.addEventListener("click", updateCityAndMakeClock);
 
+var modal = document.querySelector("#modal");
+var okay = document.querySelector("#okay");
+
+var input = document.getElementById("input");
+
+okay.addEventListener("click",function(){
+  modal.classList.add('hidden');
+  input.value = "";
+})
+
 
 function updateCityAndMakeClock(){
   var confirm = document.querySelector('#confirm');
@@ -60,6 +70,7 @@ function updateCityAndMakeClock(){
       console.error(err);
       spin.classList.add('hidden');
       confirm.classList.remove('hidden');
+      modal.classList.remove('hidden');
     });
 }
 
@@ -94,6 +105,9 @@ function showTime() {
   if (s < 10) {
     s = 0 + "" + s;
   }
+  if(h <10){
+    h = 0 + "" + h;
+  }
   var time = h + ":" + m + ":" + s;
   var foreignTime = correctedH + ":" + m + ":" + s;
 
@@ -108,50 +122,58 @@ setInterval(showTime, 1000);
 
 var body = document.body;
 var box = document.querySelectorAll(".box");
-var input = document.getElementById("input");
+
 
 const backgrounds = ['stars','haze', 'leaf','lights', 'meteor', 'sun']
 let currentIndex = 0;
 
-function applyBackground() {
-  body.setAttribute('class', backgrounds[currentIndex]);
-}
-applyBackground();
-function cycleBackgroundForward(){
-  currentIndex++;
-  if (currentIndex>5){
-    currentIndex=0;
-  }
-  if(currentIndex<0){
-    currentIndex=5;
-  }
-  applyBackground();
-}
+//All the following is associated with cycling the background which we will
+//now remove from the app
 
-function cycleBackgroundBack(){
-  currentIndex--;
-  if (currentIndex > 5) {
-    currentIndex = 0;
-  }
-  if (currentIndex < 0) {
-    currentIndex = 5;
-  }
-  applyBackground();
-}
+// function applyBackground() {
+//   body.setAttribute('class', backgrounds[currentIndex]);
+// }
+// applyBackground();
+// function cycleBackgroundForward(){
+//   currentIndex++;
+//   if (currentIndex>5){
+//     currentIndex=0;
+//   }
+//   if(currentIndex<0){
+//     currentIndex=5;
+//   }
+//   applyBackground();
+// }
 
-var left = document.querySelector("#left");
-var right = document.querySelector("#right");
+// function cycleBackgroundBack(){
+//   currentIndex--;
+//   if (currentIndex > 5) {
+//     currentIndex = 0;
+//   }
+//   if (currentIndex < 0) {
+//     currentIndex = 5;
+//   }
+//   applyBackground();
+// }
 
-left.addEventListener("click", cycleBackgroundBack);
-right.addEventListener("click", cycleBackgroundForward);
+// var left = document.querySelector("#left");
+// var right = document.querySelector("#right");
 
-if (input.value.length != 0)
+// left.addEventListener("click", cycleBackgroundBack);
+// right.addEventListener("click", cycleBackgroundForward);
+
+if (input.value.length != 0){
   submit.disabled = false;
-else
+}
+else{
   submit.disabled = true;
+}
+
 setInterval(function () {
-  if (input.value.length != 0)
+  if (input.value.length != 0){
     submit.disabled = false;
-  else
+  }
+  else{
     submit.disabled = true;
+  }
 }, 500);

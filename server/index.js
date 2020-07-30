@@ -20,7 +20,7 @@ app.use(express.json());
         })
           .catch(err => next(err))
       })
-      .catch(err=>next(err));
+      .catch(err=>res.json(err));
   })
 
 app.listen(process.env.PORT, () => {
