@@ -2,6 +2,15 @@
 font-family: Montserrat;
 }
 
+.balloon{
+  background-image: url(./assets/lighter-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pac{
+  font-family: 'Pacifico', cursive;
+}
+
 .row{
 width: 100%;
 display: flex;

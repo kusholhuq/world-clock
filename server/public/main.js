@@ -113,45 +113,48 @@ var input = document.getElementById("input");
 const backgrounds = ['stars','haze', 'leaf','lights', 'meteor', 'sun']
 let currentIndex = 0;
 
-function applyBackground() {
-  body.setAttribute('class', backgrounds[currentIndex]);
-}
-applyBackground();
-function cycleBackgroundForward(){
-  currentIndex++;
-  if (currentIndex>5){
-    currentIndex=0;
-  }
-  if(currentIndex<0){
-    currentIndex=5;
-  }
-  applyBackground();
-}
+//All the following is associated with cycling the background which we will
+//now remove from the app
 
-function cycleBackgroundBack(){
-  currentIndex--;
-  if (currentIndex > 5) {
-    currentIndex = 0;
-  }
-  if (currentIndex < 0) {
-    currentIndex = 5;
-  }
-  applyBackground();
-}
+// function applyBackground() {
+//   body.setAttribute('class', backgrounds[currentIndex]);
+// }
+// applyBackground();
+// function cycleBackgroundForward(){
+//   currentIndex++;
+//   if (currentIndex>5){
+//     currentIndex=0;
+//   }
+//   if(currentIndex<0){
+//     currentIndex=5;
+//   }
+//   applyBackground();
+// }
 
-var left = document.querySelector("#left");
-var right = document.querySelector("#right");
+// function cycleBackgroundBack(){
+//   currentIndex--;
+//   if (currentIndex > 5) {
+//     currentIndex = 0;
+//   }
+//   if (currentIndex < 0) {
+//     currentIndex = 5;
+//   }
+//   applyBackground();
+// }
 
-left.addEventListener("click", cycleBackgroundBack);
-right.addEventListener("click", cycleBackgroundForward);
+// var left = document.querySelector("#left");
+// var right = document.querySelector("#right");
 
-if (input.value.length != 0)
-  submit.disabled = false;
-else
-  submit.disabled = true;
-setInterval(function () {
-  if (input.value.length != 0)
-    submit.disabled = false;
-  else
-    submit.disabled = true;
-}, 500);
+// left.addEventListener("click", cycleBackgroundBack);
+// right.addEventListener("click", cycleBackgroundForward);
+
+// if (input.value.length != 0)
+//   submit.disabled = false;
+// else
+//   submit.disabled = true;
+// setInterval(function () {
+//   if (input.value.length != 0)
+//     submit.disabled = false;
+//   else
+//     submit.disabled = true;
+// }, 500);
