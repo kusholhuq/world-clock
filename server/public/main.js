@@ -94,6 +94,9 @@ function showTime() {
   if (s < 10) {
     s = 0 + "" + s;
   }
+  if(h <10){
+    h = 0 + "" + h;
+  }
   var time = h + ":" + m + ":" + s;
   var foreignTime = correctedH + ":" + m + ":" + s;
 

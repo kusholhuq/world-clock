@@ -16,10 +16,13 @@
     integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="balloon">
-  <div class="row">
+  <div class="container">
+    <!-- <div class="row">
     <div class="col-title s-height">
       <div class="v-align d-flex justify-content-around">
         <i class="fas fa-2x fa-chevron-left mt-1 grey-color pointer" id="left"></i>
@@ -27,26 +30,73 @@
           <i class="fas fa-2x fa-chevron-right mt-1 grey-color pointer" id="right"></i>
       </div>
     </div>
-  </div>
-    <div class="row ipadMT">
-      <div class="col-6 m-height box extraMarginTop">
+  </div> -->
+    <div class="row justify-content-end mt-5">
+      <div class="d-flex">
+        <p class="bold">Local <i class="fa fa-clock-o"></i></p>
+        <p class="bold ml-2" id="currentTime">time</p>
+      </div>
+    </div>
+    <div class="row justify-content-around">
+      <!-- <div class="col-6 m-height box extraMarginTop">
         <div class="v-align">
           <h2 id="city">City</h2>
           <p id="country">Country</p>
         </div>
-      </div>
-      <div class="col-6 m-height box extraMarginTop">
-        <div class="v-align">
-          <div id="confirm" class="mb-2">
-            <input class="push-down-input" type="text" id="input" placeholder="City">
-            <input id="submit" type="submit" class="push-down-submit pointer">
-          </div>
-          <div class="spinner-border text-light mt-4 hidden" role="status" id="spin">
-            <span class="sr-only">Loading...</span>
+      </div> -->
+      <div class="mt-5 pt-5">
+        <h1 class="pac">Clear Weather</h1>
+        <p class="text-center big-text">Simple, Accurate Weather wherever you are</p>
+        <div class="d-flex justify-content-center">
+          <div class="col-6 m-height extraMarginTop">
+            <div class="v-align">
+              <div id="confirm" class="mb-2">
+                <input class="push-down-input" type="text" id="input" placeholder="City">
+                <input id="submit" type="submit" class="push-down-submit pointer">
+              </div>
+              <div class="spinner-border  mt-4 hidden" role="status" id="spin">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
-      <div class="col-6 m-height box extraMarginTop">
+      <div class="orange mt-5 ml-5 p-3">
+        <div class="d-flex">
+          <div class="holder">
+            <h2 class="bold" id="city">City</h2>
+            <p  class="bold" id="country">Country</p>
+          </div>
+          <div class="holder">
+            <h2 class="bold">Time</h2>
+            <p class="bold" id="UTCtime">time</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="holder">
+            <h2 class="bold"  id="main">Main</h2>
+            <p  class="bold" id="mainDescription">20%</p>
+          </div>
+          <div class="holder">
+            <h2 class="bold" >Temp</h2>
+            <p class="bold"  id="temp">69 degrees </p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="holder">
+            <h2 class="bold" >Wind</h2>
+            <p  class="bold" id="wind">30mph</p>
+          </div>
+          <div class="holder">
+            <h2 class="bold" >Humidity</h2>
+            <p  class="bold" id="humidity">71%</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- <div class="col-6 m-height box extraMarginTop">
         <div class="v-align">
           <h2 id="main">Main</h2>
           <p id="mainDescription">20%</p>
@@ -81,8 +131,9 @@
           <h2>Selected City</h2>
           <p id="UTCtime">time</p>
         </div>
-      </div>
+      </div> -->
     </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="main.js"></script>
