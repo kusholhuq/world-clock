@@ -40,11 +40,13 @@ submit.addEventListener("click", updateCityAndMakeClock);
 
 var modal = document.querySelector("#modal");
 var okay = document.querySelector("#okay");
-
+var modalBack = document.querySelector("#modal-back");
 var input = document.getElementById("input");
 
 okay.addEventListener("click",function(){
   modal.classList.add('hidden');
+  modalBack.classList.remove("d-flex");
+  modalBack.classList.add("hidden");
   input.value = "";
 })
 
@@ -70,6 +72,8 @@ function updateCityAndMakeClock(){
       console.error(err);
       spin.classList.add('hidden');
       confirm.classList.remove('hidden');
+      modalBack.classList.remove("hidden");
+      modalBack.classList.add("d-flex");
       modal.classList.remove('hidden');
     });
 }
