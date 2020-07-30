@@ -38,6 +38,16 @@ function populateWeather(dualObject) {
 var submit = document.querySelector("#submit");
 submit.addEventListener("click", updateCityAndMakeClock);
 
+var modal = document.querySelector("#modal");
+var okay = document.querySelector("#okay");
+
+var input = document.getElementById("input");
+
+okay.addEventListener("click",function(){
+  modal.classList.add('hidden');
+  input.value = "";
+})
+
 
 function updateCityAndMakeClock(){
   var confirm = document.querySelector('#confirm');
@@ -60,6 +70,7 @@ function updateCityAndMakeClock(){
       console.error(err);
       spin.classList.add('hidden');
       confirm.classList.remove('hidden');
+      modal.classList.remove('hidden');
     });
 }
 
@@ -111,7 +122,7 @@ setInterval(showTime, 1000);
 
 var body = document.body;
 var box = document.querySelectorAll(".box");
-var input = document.getElementById("input");
+
 
 const backgrounds = ['stars','haze', 'leaf','lights', 'meteor', 'sun']
 let currentIndex = 0;
@@ -151,13 +162,18 @@ let currentIndex = 0;
 // left.addEventListener("click", cycleBackgroundBack);
 // right.addEventListener("click", cycleBackgroundForward);
 
-// if (input.value.length != 0)
-//   submit.disabled = false;
-// else
-//   submit.disabled = true;
-// setInterval(function () {
-//   if (input.value.length != 0)
-//     submit.disabled = false;
-//   else
-//     submit.disabled = true;
-// }, 500);
+if (input.value.length != 0){
+  submit.disabled = false;
+}
+else{
+  submit.disabled = true;
+}
+
+setInterval(function () {
+  if (input.value.length != 0){
+    submit.disabled = false;
+  }
+  else{
+    submit.disabled = true;
+  }
+}, 500);

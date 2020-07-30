@@ -49,15 +49,17 @@
         <p class="text-center big-text">Simple, Accurate Weather wherever you are</p>
         <div class="d-flex justify-content-center">
           <div class="col-6 m-height extraMarginTop">
+
             <div class="v-align">
               <div id="confirm" class="mb-2">
-                <input class="push-down-input" type="text" id="input" placeholder="City">
+                <input  class="push-down-input" type="text" id="input" placeholder="City">
                 <input id="submit" type="submit" class="push-down-submit pointer">
               </div>
               <div class="spinner-border  mt-4 hidden" role="status" id="spin">
                 <span class="sr-only">Loading...</span>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -132,6 +134,12 @@
           <p id="UTCtime">time</p>
         </div>
       </div> -->
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="text-center white-background hidden" id="modal">
+    <p>Please enter a valid location.</p>
+    <button class="okay" id="okay">Ok</button>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"

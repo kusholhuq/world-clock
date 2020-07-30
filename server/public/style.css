@@ -2,6 +2,16 @@
 font-family: Montserrat;
 }
 
+.white-background{
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  position: fixed;
+  top: 40vh;
+}
+.okay{
+  background-image: linear-gradient(to right, rgba(252, 166, 81, .9) , rgba(246, 49, 55, .9));
+}
 .balloon{
   background-image: url(./assets/balloons2.png);
   background-repeat: no-repeat;
