@@ -46,13 +46,7 @@ font-family: Montserrat;
   margin: 2rem;
   text-align: center;
 }
-/* .row{
-width: 100%;
-display: flex;
-justify-content: space-evenly;
-margin: 0vh 0;
-flex-wrap: wrap;
-} */
+
 
 h2{
   font-size: 22px;
@@ -65,7 +59,6 @@ h1{
 .col-6{
   flex-basis: 40%;
   text-align: center;
-  /* background-color: rgba(255,182,193 ,.2 ); */
   border-radius: 10px;
   margin-top: 1rem;
 }
@@ -144,80 +137,6 @@ input {
   top: 5vh;
   background-color: lightcoral;
 }
-/*
-.dark{
-  background-color: black;
-  color: white;
-}
-
-.cityRain{
-  background-image: url(assets/cityrain.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all .25s ease-in-out;
-  color:white;
-}
-
-.haze{
-  background-image: url(assets/hiHaze.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all .25s ease-in-out;
-  color: white;
-}
-
-.leaf{
-  background-image: url(assets/hiLeaf.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color:white;
-  transition: all .25s ease-in-out;
-}
-
-.lights{
-  background-image: url(assets/lights.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all .25s ease-in-out;
-}
-
-.meteor{
-  background-image: url(assets/meteor.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all .25s ease-in-out;
-}
-
-.rain{
-  background-image: url(assets/rain.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all .25s ease-in-out;
-}
-
-.stars{
-  background-image: url(assets/hiStars.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color:white;
-  transition: all .25s ease-in-out;
-}
-
-.sun{
-  background-image: url(assets/sun2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color:white;
-  transition: all .25s ease-in-out;
-}
-
-.watering{
-  background-image: url(assets/watering.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all .25s ease-in-out;
-  color:white;
-} */
 
 .background-slider{
   position: relative;
@@ -283,15 +202,6 @@ button{
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    /* .haze{
-      background-image: url(assets/haze2.jpg);
-    }
-    .leaf{
-      background-image: url(assets/leaf.jpg);
-    }
-    .stars{
-      background-image: url(assets/stars.jpg);
-    } */
 }
 
 @media only screen
@@ -300,11 +210,6 @@ button{
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-  /* body{
-  margin: 0;
-  height: 667px;
-  overflow: hidden;
-  } */
   h1{
     font-size: 5rem;
   }
@@ -332,38 +237,7 @@ button{
     h1{
       font-size: 5rem;
     }
-  /* body{
-    width: 667px;
-    height: 375px;
-    overflow: hidden;
-  } */
 
-  /* .col-6{
-    flex-basis: 18%;
-    height: 8rem;
-    position: relative;
-    margin:.5rem;
-    justify-content: space-around;
-    overflow: hidden;
-  } */
-
-  /* .col-title{
-    height: 3.5rem;
-  }
-
-  .extraMarginTop{
-    margin-top: 1.5rem;
-  } */
-
-  /* .row{
-    flex-basis: 100%;
-    width: 667px;
-    overflow: hidden;
-  } */
-
-  /* div.container{
-  width: 667px;
-  } */
 }
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
@@ -373,38 +247,6 @@ button{
   and (max-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-  /* .haze{
-    background-image: url(assets/haze2.jpg);
-  }
-
-  .leaf{
-    background-image: url(assets/leaf.jpg);
-  }
-
-  .stars{
-    background-image: url(assets/stars.jpg);
-  }
-
-  h2{
-    font-size: 40px;
-  }
-
-  p{
-    font-size: 30px;
-  }
-
-  h1{
-    font-size: 40px;
-  }
-
-  .col-title{
-    height: 5rem;
-  }
-
-  .fas{
-    position: relative;
-    top: .75rem;
-  } */
 
 }
 
@@ -415,9 +257,6 @@ button{
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-  /* .ipadMT{
-    margin-top:1rem;
-  } */
 }
 
 /* Landscape */
