@@ -2,10 +2,10 @@
 > - Maintained by: `kusholhuq`
 
 ## Description
-A mobile first web app that tells time and weather in cities across the globe.
+A dynamic web app that tells time and weather in cities across the globe.
 
 ## Live Demo
-https://world-clock.kusholhuq.com/
+https://clear-weather.kusholhuq.com/
 
 
 ## Technologies Used
@@ -27,10 +27,9 @@ https://world-clock.kusholhuq.com/
  1. User can view weather from city of choice.
  1. User can view local time.
  1. User can view time from city of choice.
- 1. User can select theme of their liking.
 
  ## Preview
- <img src="./server/public/assets/gif2.gif">
+ <img src="./server/public/assets/clearGif.gif">
 
  ## Development
 
