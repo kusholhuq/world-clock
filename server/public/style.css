@@ -47,7 +47,6 @@ font-family: Montserrat;
   text-align: center;
 }
 
-
 h2{
   font-size: 22px;
 }
@@ -62,11 +61,6 @@ h1{
   border-radius: 10px;
   margin-top: 1rem;
 }
-/* .col-title{
-  flex-basis: 100%;
-  text-align: center;
-  background-color: rgba(255,182,193 ,.4 );
-} */
 
 .v-align{
 position: relative;
@@ -77,34 +71,16 @@ top: 10%;
 height: 20vh;
 }
 
-/* .s-height{
-height: 8vh;
-} */
-
 .pointer{
   cursor: pointer;
 }
-/* .theme-point{
-transition: all ease .4s;
-}
-
-.theme-point:hover{
-background-color: grey;
-transition: all ease .4s;
-} */
 
 input.push-down-input{
 position: relative;
 top: 4vh;
 color: black;
-/* background: rgba(255,255,255,.3); */
 background:white;
 }
-
-/* .col-12{
-flex-basis: 50%;
-text-align: center;
-} */
 
 input {
   background-color: rgba(255,255,255 ,.0);
@@ -119,68 +95,18 @@ input {
   text-align: center;
 }
 
-/* .col-bar{
-  display: flex;
-  flex-basis: 20%;
-  text-align: center;
-  background-color: rgba(255,182,193 ,.4 );
-  flex-wrap: wrap;
-} */
-
-/* .input-bar{
-  text-align: center;
-  background-color: rgba(255,182,193 ,0 );
-} */
-
 .push-down-submit{
   position: relative;
   top: 5vh;
   background-color: lightcoral;
 }
 
-/* .background-slider{
-  position: relative;
-} */
-
-/* .pink{
-background-color: rgba(255,182,193 ,.2 );
-}
-
-.grey{
-background-color: rgba(232, 236, 241, .2);
-} */
-
-/* .white{
-  color: white;
-} */
-
-/* .black{
-  color: black;
-} */
-
-/* .absolute{
-  position: absolute;
-  bottom: 4vh;
-  left: 2vh;
-  right: 2vh;
-  justify-content: space-evenly;
-} */
-
-/* .flex{
-  display: flex;
-  flex-direction: row;
-} */
 
 button{
   border-radius: 5px;
   background-color: rgba(255,255,255,.1);
   border: 0;
 }
-
-/* .push-up{
-  position: relative;
-  bottom: 2vh;
-} */
 
 .spinner-border{
   position: relative;
@@ -222,9 +148,7 @@ button{
     h1{
       font-size: 5rem;
     }
-
 }
-
 
 .hidden {
   display: none;
