@@ -62,11 +62,11 @@ h1{
   border-radius: 10px;
   margin-top: 1rem;
 }
-.col-title{
+/* .col-title{
   flex-basis: 100%;
   text-align: center;
   background-color: rgba(255,182,193 ,.4 );
-}
+} */
 
 .v-align{
 position: relative;
@@ -77,21 +77,21 @@ top: 10%;
 height: 20vh;
 }
 
-.s-height{
+/* .s-height{
 height: 8vh;
-}
+} */
 
 .pointer{
   cursor: pointer;
 }
-.theme-point{
+/* .theme-point{
 transition: all ease .4s;
 }
 
 .theme-point:hover{
 background-color: grey;
 transition: all ease .4s;
-}
+} */
 
 input.push-down-input{
 position: relative;
@@ -101,10 +101,10 @@ color: black;
 background:white;
 }
 
-.col-12{
+/* .col-12{
 flex-basis: 50%;
 text-align: center;
-}
+} */
 
 input {
   background-color: rgba(255,255,255 ,.0);
@@ -119,18 +119,18 @@ input {
   text-align: center;
 }
 
-.col-bar{
+/* .col-bar{
   display: flex;
   flex-basis: 20%;
   text-align: center;
   background-color: rgba(255,182,193 ,.4 );
   flex-wrap: wrap;
-}
+} */
 
-.input-bar{
+/* .input-bar{
   text-align: center;
   background-color: rgba(255,182,193 ,0 );
-}
+} */
 
 .push-down-submit{
   position: relative;
@@ -138,38 +138,38 @@ input {
   background-color: lightcoral;
 }
 
-.background-slider{
+/* .background-slider{
   position: relative;
-}
+} */
 
-.pink{
+/* .pink{
 background-color: rgba(255,182,193 ,.2 );
 }
 
 .grey{
 background-color: rgba(232, 236, 241, .2);
-}
+} */
 
-.white{
+/* .white{
   color: white;
-}
+} */
 
-.black{
+/* .black{
   color: black;
-}
+} */
 
-.absolute{
+/* .absolute{
   position: absolute;
   bottom: 4vh;
   left: 2vh;
   right: 2vh;
   justify-content: space-evenly;
-}
+} */
 
-.flex{
+/* .flex{
   display: flex;
   flex-direction: row;
-}
+} */
 
 button{
   border-radius: 5px;
@@ -177,31 +177,16 @@ button{
   border: 0;
 }
 
-.push-up{
+/* .push-up{
   position: relative;
   bottom: 2vh;
-}
-
-.push-up-more{
-  position: relative;
-  bottom: 7vh;
-}
-
-.theme-btns{
-  font-size: 17px;
-}
+} */
 
 .spinner-border{
   position: relative;
   top: 1vh;
   width: 3rem;
   height:3rem;
-}
-
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 @media only screen
@@ -237,34 +222,6 @@ button{
     h1{
       font-size: 5rem;
     }
-
-}
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-
-}
-
-/* Portrait */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Landscape */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
