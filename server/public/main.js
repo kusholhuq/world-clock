@@ -131,40 +131,16 @@ var box = document.querySelectorAll(".box");
 const backgrounds = ['stars','haze', 'leaf','lights', 'meteor', 'sun']
 let currentIndex = 0;
 
-//All the following is associated with cycling the background which we will
-//now remove from the app
-
-// function applyBackground() {
-//   body.setAttribute('class', backgrounds[currentIndex]);
-// }
-// applyBackground();
-// function cycleBackgroundForward(){
-//   currentIndex++;
-//   if (currentIndex>5){
-//     currentIndex=0;
-//   }
-//   if(currentIndex<0){
-//     currentIndex=5;
-//   }
-//   applyBackground();
-// }
-
-// function cycleBackgroundBack(){
-//   currentIndex--;
-//   if (currentIndex > 5) {
-//     currentIndex = 0;
-//   }
-//   if (currentIndex < 0) {
-//     currentIndex = 5;
-//   }
-//   applyBackground();
-// }
-
-// var left = document.querySelector("#left");
-// var right = document.querySelector("#right");
-
-// left.addEventListener("click", cycleBackgroundBack);
-// right.addEventListener("click", cycleBackgroundForward);
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function (event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    submit.click();
+  }
+});
 
 if (input.value.length != 0){
   submit.disabled = false;
