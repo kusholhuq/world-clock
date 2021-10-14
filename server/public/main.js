@@ -56,7 +56,7 @@ function updateCityAndMakeClock(){
   var spin = document.querySelector('#spin');
   confirm.classList.add('hidden');
   spin.classList.remove('hidden');
-  city = "" + $("#input").val();
+  city = "" + document.querySelector("#input").value;
   fetch(`/api/weather/${city}`)
     .then(response => response.json())
     .then(data => {
