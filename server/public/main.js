@@ -13,6 +13,7 @@ fetch(`/api/weather/${city}`)
 
 
 function populateWeather(dualObject) {
+  console.log(dualObject);
   var main = document.querySelector("#main");
   var mainDes = document.querySelector("#mainDescription");
 
